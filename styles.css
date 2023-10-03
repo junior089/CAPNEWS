@@ -1,8 +1,12 @@
-/* Estilos gerais */
-body {
-    font-family: Arial, sans-serif;
+/* Reset de estilos e estilos gerais */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
     background-color: #f9f9f9;
     line-height: 1.6;
 }
@@ -19,8 +23,9 @@ header {
 }
 
 .logo img {
-    width: 200px;
+    max-width: 147px;
     height: auto;
+    margin-left: 27px;
 }
 
 nav ul {
@@ -63,10 +68,28 @@ nav ul li a:hover {
     color: #ff6600;
 }
 
-#news-container {
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+#recent-news-list {
+    list-style: none;
+    padding: 0;
+}
+
+#recent-news-list li {
+    margin-bottom: 20px;
+}
+
+#recent-news-list h3 {
+    font-size: 22px;
+    margin-top: 0;
+    color: #333;
+}
+
+.author {
+    font-weight: bold;
+}
+
+.date {
+    color: #666;
+    font-size: 14px;
 }
 
 /* Estilos para as notícias em destaque */
@@ -79,34 +102,12 @@ nav ul li a:hover {
 
 .featured-article h3 {
     font-size: 26px;
+    font-weight: bold;
     margin-top: 0;
+    color: #333;
 }
 
 .news-details {
-    color: #666;
-    font-size: 14px;
-}
-
-/* Estilos para as notícias recentes */
-.recent-news ul {
-    list-style: none;
-    padding: 0;
-}
-
-.recent-news li {
-    margin-bottom: 20px;
-}
-
-.recent-news h3 {
-    font-size: 22px;
-    margin-top: 0;
-}
-
-.author {
-    font-weight: bold;
-}
-
-.date {
     color: #666;
     font-size: 14px;
 }
@@ -160,4 +161,38 @@ footer {
         margin-right: 0;
         margin-bottom: 10px;
     }
+
+    #recent-news-list h3 {
+        font-size: 20px;
+    }
+
+    .news-details {
+        font-size: 12px;
+    }
+
+    .image-container img {
+        margin: 0 0 10px 0;
+    }
+    /* Estilos para o conteúdo de texto */
+.article-content {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.article-content h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+
+/* Estilos para vídeos incorporados */
+.article-content iframe {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+    display: block;
+}
+
 }

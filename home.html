@@ -9,18 +9,17 @@
 <body>
     <header>
         <div class="logo">
-            <img src="imagens/logo adv.png" alt="logo CAP NEWS">
+            <img id="logo-image" src="imagens/LogoEA-topo.png" alt="Logo CAP NEWS">
         </div>
         <nav>
             <ul>
                 <li><a href="#" data-category="economia">Economia</a></li>
-                <li><a href="#" data-category="entretenimento">Entretenimento e cultura</a></li>
+                <li><a href="#" data-category="entretenimento">Entretenimento</a></li>
                 <li><a href="#" data-category="tecnologia">Tecnologia</a></li>
                 <li><a href="#" data-category="esportes">Esportes</a></li>
-                <li><a href="#" data-category="gastronomia">gastronomia</a></li>
-                <li><a href="#" data-category="Saude">Saude</a></li>
-                <li><a href="#" data-category="espirutal">Espiritual</a></li>
-                <!-- Adicione mais categorias aqui -->
+                <li><a href="#" data-category="gastronomia">Gastronomia</a></li>
+                <li><a href="#" data-category="saude">Saúde</a></li>
+                <li><a href="#" data-category="espiritual">Espiritual</a></li>
             </ul>
         </nav>
     </header>
@@ -34,8 +33,8 @@
 
         <!-- Notícias Recentes -->
         <section class="recent-news">
-            <h2>Notícias Recentes</h2>
-            <div id="recent-news-container"></div>
+            <h2><span id="category-name">Economia</span> - Notícias Recentes</h2>
+            <ul id="recent-news-list"></ul>
         </section>
 
         <!-- Galeria de Imagens -->
@@ -43,7 +42,6 @@
             <h2>Galeria de Imagens</h2>
             <div id="image-gallery-container"></div>
         </section>
-        
     </main>
 
     <footer>
@@ -52,8 +50,5 @@
 
     <script src="news.js"></script>
     <script src="script.js"></script>
-    <script src="imageGallery.js"></script>
-    <script src="featuredNews,js"></script>
-    <script src="recentNews.js"></script>
 </body>
 </html>
