@@ -23,10 +23,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const categoryNews = newsData.filter((news) => news.category === category);
 
-        categoryNews.forEach((news) => {
+        categoryNews.forEach((news, index) => {
             const li = document.createElement("li");
             li.innerHTML = `
-                <h3>${news.title}</h3>
+                <h3><a href="#" class="news-link" data-index="${index}">${news.title}</a></h3>
                 <div class="article-content">
                     ${news.content}
                 </div>
@@ -34,7 +34,42 @@ document.addEventListener("DOMContentLoaded", function () {
             `;
             recentNewsList.appendChild(li);
         });
+
+        // Adicione um evento de clique às notícias recentes
+        const newsLinks = document.querySelectorAll(".news-link");
+        newsLinks.forEach((link) => {
+            link.addEventListener("click", function (e) {
+                e.preventDefault();
+                const index = e.target.getAttribute("data-index");
+                showNewsContent(newsData[index]);
+            });
+        });
+        
     }
+
+
+// Função para exibir o conteúdo completo da notícia
+function showNewsContent(news) {
+    const fullNewsContentContainer = document.getElementById("full-news-content");
+    fullNewsContentContainer.innerHTML = `
+        <h3>${news.title}</h3>
+        <div class="article-content">
+            ${news.content}
+        </div>
+        <p class="news-details">Por <span class="author">${news.author}</span> em <span class="date">${news.date}</span></p>
+     
+    `;
+
+    // Feche a seção de notícias em destaque quando uma notícia for lida
+    closeFeaturedNews();
+
+    // Role a página para a seção de notícias completas para exibir a notícia completa
+    const fullNewsSection = document.getElementById("full-news");
+    fullNewsSection.scrollIntoView();
+}
+
+
+    
 
     // Event listeners para as categorias
     const categories = document.querySelectorAll("nav ul li a");
@@ -62,5 +97,5 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Carregue a primeira categoria por padrão
-    loadRecentNews("economia");
+    loadRecentNews("espiritual");
 });

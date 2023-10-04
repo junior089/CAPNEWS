@@ -6,14 +6,15 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     background-color: #f9f9f9;
     line-height: 1.6;
+    color: #333; /* Cor do texto padrão */
 }
 
 /* Estilos para o cabeçalho */
 header {
-    background-color: #003366;
+    background-color: #003b55; /* Vermelho semelhante à CNN Brasil */
     color: #fff;
     padding: 20px 0;
     display: flex;
@@ -23,9 +24,9 @@ header {
 }
 
 .logo img {
-    max-width: 147px;
+    max-width: 150px;
     height: auto;
-    margin-left: 27px;
+    margin-left: 20px;
 }
 
 nav ul {
@@ -45,46 +46,62 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #ff6600;
+    color: #e77532; /* Laranja semelhante à CNN Brasil */
 }
 
 /* Estilos para as categorias de notícias */
+.section-title {
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+}
+
+.section-subtitle {
+    font-size: 20px;
+    margin-top: 0;
+    color: #333;
+}
+
+/* Estilos para títulos de categoria */
 .category-title {
-    background-color: #003366;
+    background-color: #003b55; /* Vermelho semelhante à CNN Brasil */
     color: #fff;
     padding: 10px;
     text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.category-title h2 {
-    font-size: 24px;
+.category-title h2, #category-name {
+    font-size: 28px;
     margin: 0;
-}
-
-#category-name {
-    font-size: 20px;
     font-weight: bold;
-    margin: 0;
-    color: #ff6600;
+    padding: 20px;
+    color: #333;
 }
 
+/* Estilos para a lista de notícias recentes */
 #recent-news-list {
     list-style: none;
-    padding: 0;
+    padding: 20px;
+    border-top: 1px solid #ddd;
 }
 
 #recent-news-list li {
     margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
 }
 
 #recent-news-list h3 {
-    font-size: 22px;
+    font-size: 24px;
     margin-top: 0;
     color: #333;
 }
 
 .author {
     font-weight: bold;
+    color: #666;
 }
 
 .date {
@@ -92,16 +109,17 @@ nav ul li a:hover {
     font-size: 14px;
 }
 
-/* Estilos para as notícias em destaque */
-.featured-news {
+/* Estilos comuns para notícias em destaque e galeria de imagens */
+.featured-news, .image-gallery {
     background-color: #fff;
     padding: 20px;
     margin-bottom: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Estilos para notícias em destaque */
 .featured-article h3 {
-    font-size: 26px;
+    font-size: 32px;
     font-weight: bold;
     margin-top: 0;
     color: #333;
@@ -109,37 +127,44 @@ nav ul li a:hover {
 
 .news-details {
     color: #666;
-    font-size: 14px;
+    font-size: 16px;
+    padding: 14px;
 }
 
 /* Estilos para a galeria de imagens */
-.image-gallery {
-    background-color: #fff;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-
 .image-container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .image-container img {
-    max-width: 100%;
-    margin: 0 10px 10px 0;
+    max-width: 48%;
+    margin-bottom: 20px;
     border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Estilos de link */
+a {
+    color: #003b55; /* Vermelho semelhante à CNN Brasil */
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s;
+}
+
+a:hover {
+    border-bottom: 1px solid #003b55; /* Vermelho semelhante à CNN Brasil */
+}
+
 /* Estilos para o rodapé */
 footer {
-    background-color: #003366;
+    background-color: #003b55; /* Vermelho semelhante à CNN Brasil */
     color: #fff;
-    text-align: center;
-    padding: 10px 0;
+    padding: 25px;
     font-size: 14px;
+    text-align: center;
 }
 
 /* Responsividade */
@@ -164,6 +189,7 @@ footer {
 
     #recent-news-list h3 {
         font-size: 20px;
+        padding: 20px;
     }
 
     .news-details {
@@ -173,26 +199,26 @@ footer {
     .image-container img {
         margin: 0 0 10px 0;
     }
+
     /* Estilos para o conteúdo de texto */
-.article-content {
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
+    .article-content {
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        padding: 20px;
+    }
 
-.article-content h2 {
-    font-size: 24px;
-    font-weight: bold;
-    margin: 20px 0;
-}
+    .article-content h2 {
+        font-size: 24px;
+        font-weight: bold;
+        margin: 20px 0;
+    }
 
-
-/* Estilos para vídeos incorporados */
-.article-content iframe {
-    max-width: 100%;
-    height: auto;
-    margin: 20px 0;
-    display: block;
-}
-
+    /* Estilos para vídeos incorporados */
+    .article-content iframe {
+        max-width: 100%;
+        height: auto;
+        margin: 20px 0;
+        display: block;
+    }
 }
