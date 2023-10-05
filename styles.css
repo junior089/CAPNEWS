@@ -148,19 +148,19 @@ nav ul li a:hover {
 
 /* Estilos de link */
 a {
-    color: #003b55; /* Vermelho semelhante à CNN Brasil */
+    color: #003b55; 
     text-decoration: none;
     border-bottom: 1px solid transparent;
     transition: border-color 0.3s;
 }
 
 a:hover {
-    border-bottom: 1px solid #003b55; /* Vermelho semelhante à CNN Brasil */
+    border-bottom: 1px solid #003b55;
 }
 
 /* Estilos para o rodapé */
 footer {
-    background-color: #003b55; /* Vermelho semelhante à CNN Brasil */
+    background-color: #003b55;
     color: #fff;
     padding: 25px;
     font-size: 14px;
