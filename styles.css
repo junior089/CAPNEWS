@@ -211,6 +211,34 @@ footer {
     top: 100vh;
 }
 
+/* Estilizando o título da notícia completa */
+.full-news h3 {
+    font-size: 30px; /* Tamanho de fonte maior */
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin: 20px 0; /* Espaçamento superior e inferior aumentado */
+}
+
+/* Estilizando o conteúdo do artigo */
+.full-news .article-content {
+    font-size: 18px; /* Tamanho de fonte para o conteúdo */
+    line-height: 1.6;
+    color: #333; /* Cor do texto mais escura */
+    margin: 15px 0; /* Espaçamento vertical entre parágrafos */
+}
+
+/* Estilizando o autor e a data */
+.full-news .news-details {
+    font-size: 14px;
+    color: #777;
+    text-align: right;
+    margin-top: 10px;
+}
+
+
+
+
 /* Responsividade */
 @media screen and (max-width: 768px) {
     header {

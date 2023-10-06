@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
         fullnewsopen = false;
     }
 
-    // Função para carregar notícias recentes
+    // Função para carregar previas de noticias
     function loadRecentNews(category) {
         const recentNewsList = document.getElementById("recent-news-list");
         recentNewsList.innerHTML = "";
@@ -49,19 +49,19 @@ document.addEventListener("DOMContentLoaded", function () {
             li.innerHTML = `
                 <h3><a href="#" class="news-link" data-index="${index}">${news.title}</a></h3>
                 <div class="article-content">
-                    ${news.content}
+                    ${news.resumo}
                 </div>
-                <p class="news-details">Por <span class="author">${news.author}</span> em <span class="date">${news.date}</span></p>
+                <p class="news-details">Por <span class="author">${news.autor}</span> em <span class="date">${news.date}</span></p>
             `;
             recentNewsList.appendChild(li);
         });
 
         // Adicione um evento de clique às notícias recentes
         const newsLinks = document.querySelectorAll(".news-link");
-        newsLinks.forEach((link) => {
+        newsLinks.forEach(function (link, index) {
             link.addEventListener("click", function (e) {
                 e.preventDefault();
-                const index = e.target.getAttribute("data-index");
+                console.log("Índice da notícia clicada:", index); // Depuração
                 showNewsContent(newsData[index]);
             });
         });
@@ -126,25 +126,37 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Função para exibir o conteúdo completo da notícia
 function showNewsContent(news) {
+    console.log("Notícia clicada:", news); // Adicione esta linha para depurar
     const fullNewsContentContainer = document.getElementById("full-news-content");
-    fullNewsContentContainer.innerHTML = `
-        <h3>${news.title}</h3>
-        <div class="article-content">
-            ${news.content}
-        </div>
-        <p class="news-details">Por <span class="author">${news.author}</span> em <span class="date">${news.date}</span></p>
-     
-    `;
+    
+    // O nome do arquivo txt corresponda ao título da notícia
+    const txtFileName = `${news.title}.docx`;
 
-    // Feche a seção de notícias em destaque quando uma notícia for lida
-    closeFeaturedNews();
-    closeImageGallery();
-    closerecentNewsLists ();
+    // Aqui você pode fazer uma solicitação para carregar o conteúdo do arquivo txt
+    fetch(`content/${txtFileName}`)
+        .then(response => response.text())
+        .then(txtContent => {
+            fullNewsContentContainer.innerHTML = `
+                <h3>${news.title}</h3>
+                <div class="article-content">
+                    ${txtContent}
+                </div>
+                <p class="news-details">Por <span class="author">${news.author}</span> em <span class="date">${news.date}</span></p>
+            `;
 
-    // Role a página para a seção de notícias completas para exibir a notícia completa
-    const fullNewsSection = document.getElementById("full-news");
-    fullNewsSection.scrollIntoView();
+            // Feche a seção de notícias em destaque quando uma notícia for lida
+            closeFeaturedNews();
+            closeImageGallery();
+            closerecentNewsLists();
+
+            // Role a página para a seção de notícias completas para exibir a notícia completa
+            const fullNewsSection = document.getElementById("full-news");
+            fullNewsSection.scrollIntoView();
+        })
+        .catch(error => console.error("Erro ao carregar o arquivo :", error));
 }
+
+
 
     // Event listeners para as categorias
     const categories = document.querySelectorAll("nav ul li a");
