@@ -14,13 +14,14 @@ body {
 
 /* Estilos para o cabeçalho */
 header {
-    background-color: #003b55; /* Vermelho semelhante à CNN Brasil */
+    background-color: #003b55; 
     color: #fff;
     padding: 20px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 0;
 }
 
 .logo img {
@@ -46,7 +47,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #e77532; /* Laranja semelhante à CNN Brasil */
+    color: #e77532; 
 }
 
 /* Estilos para as categorias de notícias */
@@ -64,7 +65,7 @@ nav ul li a:hover {
 
 /* Estilos para títulos de categoria */
 .category-title {
-    background-color: #003b55; /* Vermelho semelhante à CNN Brasil */
+    background-color: #003b55; 
     color: #fff;
     padding: 10px;
     text-align: center;
@@ -109,62 +110,105 @@ nav ul li a:hover {
     font-size: 14px;
 }
 
-/* Estilos comuns para notícias em destaque e galeria de imagens */
-.featured-news, .image-gallery {
+/* Estilos comuns para notícias em destaques */
+.featured-news{
     background-color: #fff;
     padding: 20px;
     margin-bottom: 20px;
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+
 }
 
-/* Estilos para notícias em destaque */
-.featured-article h3 {
-    font-size: 32px;
-    font-weight: bold;
+/* Estilos do carrossel de imagens */
+.image-gallery {
+    text-align: center;
+    position: relative;
+    width: 100vw; /* Largura da tela inteira */
+    height: 100vh; /* Altura da tela inteira */
+    overflow: hidden;
     margin-top: 0;
-    color: #333;
+    padding-top: 0;
 }
 
-.news-details {
-    color: #666;
-    font-size: 16px;
-    padding: 14px;
-}
-
-/* Estilos para a galeria de imagens */
-.image-container {
+.carousel-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
-.image-container img {
-    max-width: 48%;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5 ease-in-out;
 }
+
+.carousel-slide img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover; /* A imagem cobre todo o contêiner */
+    margin: 0 auto;
+}
+
+#prevBtn,
+#nextBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent; /* Botões transparentes */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 44px;
+    opacity: 0.1; /* Opacidade reduzida */
+    transition: opacity 0.3s ease-in-out;
+}
+
+#prevBtn:hover,
+#nextBtn:hover {
+    background-color: rgba(0, 0, 0, 0.5); /* Aumenta a opacidade ao passar o mouse */
+}
+
+#prevBtn {
+    left: 10px;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+
+#nextBtn {
+    right: 10px;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+
 
 /* Estilos de link */
 a {
-    color: #003b55; /* Vermelho semelhante à CNN Brasil */
+    color: #003b55; 
     text-decoration: none;
     border-bottom: 1px solid transparent;
     transition: border-color 0.3s;
 }
 
 a:hover {
-    border-bottom: 1px solid #003b55; /* Vermelho semelhante à CNN Brasil */
+    border-bottom: 1px solid #003b55; 
 }
+
+
 
 /* Estilos para o rodapé */
 footer {
-    background-color: #003b55; /* Vermelho semelhante à CNN Brasil */
+    background-color: #003b55; 
     color: #fff;
     padding: 25px;
     font-size: 14px;
     text-align: center;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    top: 100vh;
 }
 
 /* Responsividade */

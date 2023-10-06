@@ -16,6 +16,27 @@ document.addEventListener("DOMContentLoaded", function () {
         featuredNewsOpen = true;
     }
 
+    // Função para fechar a seção de galeria de imagens 
+    function closeImageGallery (){
+        const ImageGallery = document.querySelector(".image-gallery");
+        ImageGallery.style.display = "none";
+        ImageGalleryopen = false;
+    }
+
+    // Função para fechar a seção de noticias recentes
+    function closerecentNewsLists (){
+        const recentNewsList = document.querySelector(".recent-news");
+        recentNewsList.style.display = "none";
+        recentNewsopen = false;
+    }
+   
+    // Função para fechar a seção de noticias completas    
+    function closefullnews (){
+        const fullnews = document.querySelector(".full-news");
+        fullnews.style.display = "none";
+        fullnewsopen = false;
+    }
+
     // Função para carregar notícias recentes
     function loadRecentNews(category) {
         const recentNewsList = document.getElementById("recent-news-list");
@@ -47,6 +68,61 @@ document.addEventListener("DOMContentLoaded", function () {
         
     }
 
+    const carouselSlide = document.querySelector(".carousel-slide");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+    const images = document.querySelectorAll(".carousel-slide img");
+
+    let currentIndex = 0;
+    let slideInterval;
+
+    // Função para avançar para a próxima imagem
+    function nextImage() {
+        currentIndex++;
+        if (currentIndex >= images.length) {
+            currentIndex = 0;
+        }
+        updateCarousel();
+    }
+
+    // Função para voltar para a imagem anterior
+    function prevImage() {
+        currentIndex--;
+        if (currentIndex < 0) {
+            currentIndex = images.length - 1;
+        }
+        updateCarousel();
+    }
+
+    // Atualiza a exibição do carrossel
+    function updateCarousel() {
+        const offset = -currentIndex * 100 + "%";
+        carouselSlide.style.transform = `translateX(${offset})`;
+    }
+
+    // Adiciona eventos de clique aos botões "Anterior" e "Próxima"
+    prevBtn.addEventListener("click", prevImage);
+    nextBtn.addEventListener("click", nextImage);
+
+    // Configura um intervalo para avançar automaticamente
+    function startAutoSlide() {
+        slideInterval = setInterval(nextImage, 3000); // Avança automaticamente a cada 3 segundos
+    }
+
+    function stopAutoSlide() {
+        clearInterval(slideInterval);
+    }
+
+    // Inicializa o carrossel e inicia a reprodução automática
+    updateCarousel();
+    startAutoSlide();
+    
+    // Pausa a reprodução automática quando o mouse está sobre o carrossel
+    carouselSlide.addEventListener("mouseenter", stopAutoSlide);
+    
+    // Retoma a reprodução automática quando o mouse sai do carrossel
+    carouselSlide.addEventListener("mouseleave", startAutoSlide);
+
 
 // Função para exibir o conteúdo completo da notícia
 function showNewsContent(news) {
@@ -62,14 +138,13 @@ function showNewsContent(news) {
 
     // Feche a seção de notícias em destaque quando uma notícia for lida
     closeFeaturedNews();
+    closeImageGallery();
+    closerecentNewsLists ();
 
     // Role a página para a seção de notícias completas para exibir a notícia completa
     const fullNewsSection = document.getElementById("full-news");
     fullNewsSection.scrollIntoView();
 }
-
-
-    
 
     // Event listeners para as categorias
     const categories = document.querySelectorAll("nav ul li a");
@@ -77,7 +152,7 @@ function showNewsContent(news) {
 
     const logoImage = document.getElementById("logo-image");
     logoImage.addEventListener("click", function () {
-        window.location.href = "home.html"; // Substitua com a URL da sua página inicial
+        window.location.href = "home.html";
     });
 
     categories.forEach((category) => {
@@ -89,6 +164,7 @@ function showNewsContent(news) {
             // Fecha a seção de notícias em destaque ao acessar uma categoria de notícias
             if (featuredNewsOpen) {
                 closeFeaturedNews();
+                closeImageGallery ();
             }
 
             // Carrega notícias recentes da categoria selecionada

@@ -9,22 +9,37 @@
 <body>
     <header>
         <div class="logo">
-            <img id="logo-image" src="imagens/LogoEA-topo.png" alt="Logo CAP NEWS">
+            <img id="logo-image" src="imagens/logos/LogoEA-topo.png" alt="Logo CAP NEWS">
         </div>
         <nav>
             <ul>
                 <li><a href="#" data-category="economia">Economia</a></li>
-                <li><a href="#" data-category="entretenimento">Entretenimento</a></li>
-                <li><a href="#" data-category="tecnologia">Tecnologia</a></li>
+                <li><a href="#" data-category="entretenimento">Entretenimento e Cultura</a></li>
+                <li><a href="#" data-category="tecnologia">Ciências e Tecnologia</a></li>
                 <li><a href="#" data-category="esportes">Esportes</a></li>
                 <li><a href="#" data-category="gastronomia">Gastronomia</a></li>
                 <li><a href="#" data-category="saude">Saúde</a></li>
                 <li><a href="#" data-category="espiritual">Espiritual</a></li>
+                <li><a href="#" data-category="politica">Política</a></a></li>
             </ul>
         </nav>
     </header>
     
     <main>
+
+        <!-- Galeria de Imagens -->
+        <section class="image-gallery">
+            <div class="carousel-container">
+                <div class="carousel-slide">
+                    <img src="imagens/carrossel/teste1.jpg" alt="Imagem 1">
+                    <img src="imagens/carrossel/teste2.jpg" alt="Imagem 2">
+                    <img src="imagens/carrossel/teste3.jpg" alt="Imagem 3">
+                </div>
+                <button id="prevBtn"><</button>
+                <button id="nextBtn">></button>
+            </div>
+        </section>
+
         <!-- Notícias em Destaque -->
         <section class="featured-news">
             <h1 class="section-title">Notícia em Destaque</h1>
@@ -33,14 +48,8 @@
     
         <!-- Notícias Recentes -->
         <section class="recent-news">
-            <h2 class="section-subtitle"><span id="category-name">Economia</span>- Notícias Recentes</h2>
+            <h2 class="section-subtitle"><span id="category-name">Economia</span></h2>
             <ul id="recent-news-list"></ul>
-        </section>
-    
-        <!-- Galeria de Imagens -->
-        <section class="image-gallery">
-            <h2 class="section-subtitle">Galeria de Imagens</h2>
-            <div id="image-gallery-container"></div>
         </section>
 
         <!-- Conteúdo da Notícia Completa -->

@@ -29,7 +29,7 @@ const newsData = [
     },
     {
         category: "esportes",
-        title: "Time Local Veonato",
+        title: "Time Local vence liga",
         content: "O time de futebol local conquistou o campeonato nacional este fim de semana, derrotando o rival por 3-1 na final. Os torcedores encheram o estádio para comemorar a vitória histórica do time. O treinador elogiou a dedicação e o trabalho em equipe dos jogadores.",
         author: "Repórter Esportivo",
         date: "18 de Setembro de 2023",
@@ -72,12 +72,13 @@ function loadFeaturedNews() {
     const featuredNews = newsData[0]; // A primeira notícia será a notícia em destaque
 
     const featuredNewsHTML = `
-        <article class="featured-article">
-            <h3>${featuredNews.title}</h3>
-            <p>${featuredNews.content}</p>
-            <p class="news-details">Por <span class="author">${featuredNews.author}</span> em <span class="date">${featuredNews.date}</span></p>
-        </article>
-    `;
+    <article class="featured-article">
+        <h3>${featuredNews.title}</h3>
+        <p>${featuredNews.content}</p>
+        <p class="news-details">Por <span class="author">${featuredNews.author}</span> em <span class="date">${featuredNews.date}</span></p>
+        <a href="#" class="read-more" data-index="0">Leia mais</a>
+    </article>
+`;
 
     featuredNewsContainer.innerHTML = featuredNewsHTML;
 }
