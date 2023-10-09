@@ -239,7 +239,7 @@ footer {
     padding: 20px;
     margin-bottom: 20px;
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px; /* Borda arredondada */
+    border-radius: 8px; /* Borda arredondada */
 }
 
 .news-container {
@@ -249,12 +249,12 @@ footer {
 }
 
 .news-block {
-    width: 30%; /* Ajuste a largura conforme necessário */
+    width: 33%; /* Ajuste a largura conforme necessário */
     padding: 10px;
     box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
     background-color: #fff; /* Fundo branco para cada bloco */
-    border-radius: 10px; /* Borda arredondada */
+    border-radius: 5px; /* Borda arredondada */
     margin-bottom: 20px;
     transition: transform 0.3s ease; /* Efeito de transformação ao passar o mouse */
 }
@@ -267,7 +267,7 @@ footer {
     max-width: 100%;
     height: auto;
     margin-bottom: 10px;
-    border-radius: 5px; /* Borda arredondada para as imagens */
+    border-radius: 6px; /* Borda arredondada para as imagens */
 }
 
 .news-block h3 {
@@ -297,7 +297,7 @@ footer {
 /* Estilos para a Seção de Placar de Esportes */
 .sports-score {
     background-color: #fff; /* Plano de fundo branco */
-    padding: 20px;
+    padding: 0px;
     color: #333; /* Cor do texto */
     border-radius: 10px; /* Borda arredondada */
     margin-bottom: 20px;
@@ -312,25 +312,26 @@ footer {
     display: flex;
     flex-wrap: wrap; /* Para lidar com vários blocos em várias linhas */
     justify-content: space-between;
-    padding: 10px; /* Espaçamento interno */
+    padding: 5px; /* Espaçamento interno */
 }
 
 .score-block {
-    width: calc(50% - 10px); /* Distribuição em duas colunas com margens entre elas */
+    width: calc(25% - 35px); /* Distribuição em duas colunas com margens entre elas */
     box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
     background-color: #fff; /* Fundo branco para cada bloco */
-    border-radius: 10px; /* Borda arredondada */
-    margin-bottom: 20px;
+    border-radius: 5px; /* Borda arredondada */
+    margin-bottom: 10px;
     transition: transform 0.3s ease; /* Efeito de transformação ao passar o mouse */
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-evenly; /* Alinha os elementos internos à esquerda e à direita */
     align-items: center;
-    padding: 20px;
+    padding: 15px;
 }
 
 .score-block:hover {
-    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+    transform: translateY(-8px); /* Efeito de elevação ao passar o mouse */
 }
 
 .team-info {
@@ -347,7 +348,6 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50%; /* Borda circular para o logotipo */
     margin-bottom: 10px; /* Espaçamento inferior para o logotipo */
 }
 
@@ -355,8 +355,6 @@ footer {
     max-width: 100%;
     max-height: 100%;
 }
-
-
 
 .score {
     font-size: 24px;
@@ -366,7 +364,7 @@ footer {
 
 .divider {
     font-size: 24px;
-    margin: 0 10px;
+    margin: 0;
 }
 
 .match-info {
@@ -379,6 +377,7 @@ footer {
 .team-name:hover {
     text-decoration: underline;
 }
+
 
 
 
