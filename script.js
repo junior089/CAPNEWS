@@ -37,6 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
         fullnewsopen = false;
     }
 
+
     // Função para carregar previas de noticias
     function loadRecentNews(category) {
         const recentNewsList = document.getElementById("recent-news-list");
@@ -67,6 +68,67 @@ document.addEventListener("DOMContentLoaded", function () {
         });
         
     }
+
+        // Função para exibir o conteúdo completo da notícia
+        function showNewsContent(news) {
+    console.log("Notícia clicada:", news); // Adicione esta linha para depurar
+    const fullNewsContentContainer = document.getElementById("full-news-content");
+    
+    // O nome do arquivo txt corresponda ao título da notícia
+    const txtFileName = `${news.title}.docx`;
+
+    // Aqui você pode fazer uma solicitação para carregar o conteúdo do arquivo docx
+    fetch(`content/${txtFileName}`)
+        .then(response => response.text())
+        .then(txtContent => {
+            fullNewsContentContainer.innerHTML = `
+                <h3>${news.title}</h3>
+                <div class="article-content">
+                    ${txtContent}
+                </div>
+                <p class="news-details">Por <span class="author">${news.author}</span> em <span class="date">${news.date}</span></p>
+            `;
+
+            // Feche a seção de notícias em destaque quando uma notícia for lida
+            closeFeaturedNews();
+            closeImageGallery();
+            closerecentNewsLists();
+            fecharSecaoNoticias();
+
+            // Role a página para a seção de notícias completas para exibir a notícia completa
+            const fullNewsSection = document.getElementById("full-news");
+            fullNewsSection.scrollIntoView();
+        })
+        .catch(error => console.error("Erro ao carregar o arquivo :", error));
+}
+
+
+
+    // Event listeners para as categorias
+    const categories = document.querySelectorAll("nav ul li a");
+    const categoryTitle = document.getElementById("category-name");
+
+    const logoImage = document.getElementById("logo-image");
+    logoImage.addEventListener("click", function () {
+        window.location.href = "index.html";
+    });
+
+    categories.forEach((category) => {
+        category.addEventListener("click", function (e) {
+            e.preventDefault();
+            const selectedCategory = e.target.getAttribute("data-category");
+            categoryTitle.textContent = selectedCategory.charAt(0).toUpperCase() + selectedCategory.slice(1);
+
+            // Fecha a seção de notícias em destaque ao acessar uma categoria de notícias
+            if (featuredNewsOpen) {
+                closeFeaturedNews();
+                closeImageGallery ();
+            }
+
+            // Carrega notícias recentes da categoria selecionada
+            loadRecentNews(selectedCategory);
+        });
+    });
 
     const carouselSlide = document.querySelector(".carousel-slide");
     const prevBtn = document.getElementById("prevBtn");
@@ -121,69 +183,7 @@ document.addEventListener("DOMContentLoaded", function () {
     carouselSlide.addEventListener("mouseenter", stopAutoSlide);
     
     // Retoma a reprodução automática quando o mouse sai do carrossel
-    carouselSlide.addEventListener("mouseleave", startAutoSlide);
+    carouselSlide.addEventListener("mouseleave", startAutoSlide)
 
-
-// Função para exibir o conteúdo completo da notícia
-function showNewsContent(news) {
-    console.log("Notícia clicada:", news); // Adicione esta linha para depurar
-    const fullNewsContentContainer = document.getElementById("full-news-content");
     
-    // O nome do arquivo txt corresponda ao título da notícia
-    const txtFileName = `${news.title}.docx`;
-
-    // Aqui você pode fazer uma solicitação para carregar o conteúdo do arquivo txt
-    fetch(`content/${txtFileName}`)
-        .then(response => response.text())
-        .then(txtContent => {
-            fullNewsContentContainer.innerHTML = `
-                <h3>${news.title}</h3>
-                <div class="article-content">
-                    ${txtContent}
-                </div>
-                <p class="news-details">Por <span class="author">${news.author}</span> em <span class="date">${news.date}</span></p>
-            `;
-
-            // Feche a seção de notícias em destaque quando uma notícia for lida
-            closeFeaturedNews();
-            closeImageGallery();
-            closerecentNewsLists();
-
-            // Role a página para a seção de notícias completas para exibir a notícia completa
-            const fullNewsSection = document.getElementById("full-news");
-            fullNewsSection.scrollIntoView();
-        })
-        .catch(error => console.error("Erro ao carregar o arquivo :", error));
-}
-
-
-
-    // Event listeners para as categorias
-    const categories = document.querySelectorAll("nav ul li a");
-    const categoryTitle = document.getElementById("category-name");
-
-    const logoImage = document.getElementById("logo-image");
-    logoImage.addEventListener("click", function () {
-        window.location.href = "home.html";
-    });
-
-    categories.forEach((category) => {
-        category.addEventListener("click", function (e) {
-            e.preventDefault();
-            const selectedCategory = e.target.getAttribute("data-category");
-            categoryTitle.textContent = selectedCategory.charAt(0).toUpperCase() + selectedCategory.slice(1);
-
-            // Fecha a seção de notícias em destaque ao acessar uma categoria de notícias
-            if (featuredNewsOpen) {
-                closeFeaturedNews();
-                closeImageGallery ();
-            }
-
-            // Carrega notícias recentes da categoria selecionada
-            loadRecentNews(selectedCategory);
-        });
-    });
-
-    // Carregue a primeira categoria por padrão
-    loadRecentNews("espiritual");
 });

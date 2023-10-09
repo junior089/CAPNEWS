@@ -22,6 +22,7 @@ header {
     align-items: center;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     margin: 0;
+    border: none;
 }
 
 .logo img {
@@ -124,11 +125,14 @@ nav ul li a:hover {
     text-align: center;
     position: relative;
     width: 100vw; /* Largura da tela inteira */
-    height: 100vh; /* Altura da tela inteira */
+    height: calc(100vh - 20px); /* Altura da tela inteira menos 20px de espaço */
     overflow: hidden;
-    margin-top: 0;
+    margin-top: 0; /* Remova qualquer margem superior */
     padding-top: 0;
+    border: none;
 }
+
+
 
 .carousel-container {
     display: flex;
@@ -235,6 +239,154 @@ footer {
     text-align: right;
     margin-top: 10px;
 }
+
+/* Estilos para a Seção de Notícias */
+.news-section {
+    background-color: #f9f9f9; /* Altere a cor de fundo conforme desejado */
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* Borda arredondada */
+}
+
+.news-container {
+    display: flex;
+    flex-wrap: wrap; /* Para lidar com vários blocos em uma única linha */
+    justify-content: space-between;
+}
+
+.news-block {
+    width: 30%; /* Ajuste a largura conforme necessário */
+    padding: 10px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: #fff; /* Fundo branco para cada bloco */
+    border-radius: 10px; /* Borda arredondada */
+    margin-bottom: 20px;
+    transition: transform 0.3s ease; /* Efeito de transformação ao passar o mouse */
+}
+
+.news-block:hover {
+    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+}
+
+.news-block img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px; /* Borda arredondada para as imagens */
+}
+
+.news-block h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333; /* Cor do título da notícia */
+}
+
+.news-block p {
+    font-size: 14px;
+    color: #777; /* Cor do texto da notícia */
+}
+
+.news-block a {
+    color: #003b55;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Estilize os links quando o mouse estiver sobre eles */
+.news-block a:hover {
+    text-decoration: underline;
+    color: #e77532; /* Cor ao passar o mouse */
+}
+
+
+/* Estilos para a Seção de Placar de Esportes */
+.sports-score {
+    background-color: #fff; /* Plano de fundo branco */
+    padding: 20px;
+    color: #333; /* Cor do texto */
+    border-radius: 10px; /* Borda arredondada */
+    margin-bottom: 20px;
+}
+
+.sports-score .section-title {
+    font-size: 24px;
+    margin: 0 0 20px;
+}
+
+.score-container {
+    display: flex;
+    flex-wrap: wrap; /* Para lidar com vários blocos em várias linhas */
+    justify-content: space-between;
+    padding: 10px; /* Espaçamento interno */
+}
+
+.score-block {
+    width: calc(50% - 10px); /* Distribuição em duas colunas com margens entre elas */
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: #fff; /* Fundo branco para cada bloco */
+    border-radius: 10px; /* Borda arredondada */
+    margin-bottom: 20px;
+    transition: transform 0.3s ease; /* Efeito de transformação ao passar o mouse */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.score-block:hover {
+    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+}
+
+.team-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.team-logo {
+    width: 50px; /* Largura fixa para o logotipo do time */
+    height: 50px; /* Altura fixa para o logotipo do time */
+    background-color: #fff; /* Fundo branco para o logotipo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; /* Borda circular para o logotipo */
+    margin-bottom: 10px; /* Espaçamento inferior para o logotipo */
+}
+
+.team-logo-img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+
+.score {
+    font-size: 24px;
+    font-weight: bold;
+    color: #363636; /* Cor do placar */
+}
+
+.divider {
+    font-size: 24px;
+    margin: 0 10px;
+}
+
+.match-info {
+    font-size: 14px;
+    color: #777; /* Cor do texto informativo */
+    margin-top: 10px;
+}
+
+/* Estilize os links quando o mouse estiver sobre eles */
+.team-name:hover {
+    text-decoration: underline;
+}
+
 
 
 
