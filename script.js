@@ -37,6 +37,19 @@ document.addEventListener("DOMContentLoaded", function () {
         fullnewsopen = false;
     }
 
+    // Função para fechar blocos de noticias
+    function closenwessection (){
+        const NewsSection = document.querySelector(".news-section")
+        NewsSection.style.display = "none";
+        newssectionopen = false;
+    }
+
+    function closesportscore (){
+        const sportscore = document.querySelector(".sports-score")
+        sportscore.style.display = "none";
+        sportscoreopen = false;
+    }
+
 
     // Função para carregar previas de noticias
     function loadRecentNews(category) {
@@ -57,15 +70,18 @@ document.addEventListener("DOMContentLoaded", function () {
             recentNewsList.appendChild(li);
         });
 
-        // Adicione um evento de clique às notícias recentes
-        const newsLinks = document.querySelectorAll(".news-link");
-        newsLinks.forEach(function (link, index) {
-            link.addEventListener("click", function (e) {
-                e.preventDefault();
-                console.log("Índice da notícia clicada:", index); // Depuração
-                showNewsContent(newsData[index]);
-            });
-        });
+        // Adicione um evento de clique às notícias 
+const newsLinks = document.querySelectorAll(".news-link");
+newsLinks.forEach(function (link) {
+    link.addEventListener("click", function (e) {
+        e.preventDefault();
+        const index = Array.from(newsLinks).indexOf(link);
+        if (index !== -1) {
+            showNewsContent(newsData[index]);
+        }
+    });
+});
+        
         
     }
 
@@ -93,7 +109,8 @@ document.addEventListener("DOMContentLoaded", function () {
             closeFeaturedNews();
             closeImageGallery();
             closerecentNewsLists();
-            fecharSecaoNoticias();
+            closenwessection();
+            closesportscore();
 
             // Role a página para a seção de notícias completas para exibir a notícia completa
             const fullNewsSection = document.getElementById("full-news");
@@ -123,9 +140,12 @@ document.addEventListener("DOMContentLoaded", function () {
             if (featuredNewsOpen) {
                 closeFeaturedNews();
                 closeImageGallery ();
+                closenwessection ();
+                closesportscore ();
+                
             }
 
-            // Carrega notícias recentes da categoria selecionada
+            // Carrega notícias da categoria selecionada
             loadRecentNews(selectedCategory);
         });
     });
