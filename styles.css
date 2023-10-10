@@ -7,7 +7,6 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f9f9f9;
     line-height: 1.6;
     color: #333; /* Cor do texto padrão */
 }
@@ -20,7 +19,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     margin: 0;
     border: none;
 }
@@ -45,6 +43,7 @@ nav ul li a {
     text-decoration: none;
     font-size: 18px;
     transition: color 0.3s ease;
+
 }
 
 nav ul li a:hover {
@@ -80,37 +79,6 @@ nav ul li a:hover {
     padding: 20px;
     color: #333;
 }
-
-/* Estilos para a lista de notícias recentes */
-#recent-news-list {
-    list-style: none;
-    padding: 20px;
-    border-top: 1px solid #ddd;
-}
-
-#recent-news-list li {
-    margin-bottom: 20px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
-}
-
-#recent-news-list h3 {
-    font-size: 24px;
-    margin-top: 0;
-    color: #333;
-}
-
-.author {
-    font-weight: bold;
-    color: #666;
-}
-
-.date {
-    color: #666;
-    font-size: 14px;
-}
-
 
 
 /* Estilos do carrossel de imagens */
@@ -376,65 +344,5 @@ footer {
 /* Estilize os links quando o mouse estiver sobre eles */
 .team-name:hover {
     text-decoration: underline;
-}
+} 
 
-
-
-
-
-
-/* Responsividade */
-@media screen and (max-width: 768px) {
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .logo {
-        margin-bottom: 10px;
-    }
-
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav ul li {
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-
-    #recent-news-list h3 {
-        font-size: 20px;
-        padding: 20px;
-    }
-
-    .news-details {
-        font-size: 12px;
-    }
-
-    .image-container img {
-        margin: 0 0 10px 0;
-    }
-
-    /* Estilos para o conteúdo de texto */
-    .article-content {
-        font-size: 18px;
-        line-height: 1.6;
-        margin-bottom: 20px;
-        padding: 20px;
-    }
-
-    .article-content h2 {
-        font-size: 24px;
-        font-weight: bold;
-        margin: 20px 0;
-    }
-
-    /* Estilos para vídeos incorporados */
-    .article-content iframe {
-        max-width: 100%;
-        height: auto;
-        margin: 20px 0;
-        display: block;
-    }
-}

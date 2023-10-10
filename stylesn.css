@@ -1,0 +1,172 @@
+/* Reset de estilos para garantir consistência entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos gerais */
+body {
+    font-family: "Arial", sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilos para o cabeçalho */
+header {
+    background-color: #003b55; 
+    color: #fff;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    border: none;
+}
+
+.logo img {
+    max-width: 150px;
+    height: auto;
+    margin-left: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+
+}
+
+nav ul li a:hover {
+    color: #e77532; 
+}
+
+/* Estilos para o artigo */
+.article {
+    max-width: 80%; /* Limita o artigo a 70% da largura da página */
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+.article-header {
+    text-align: left; 
+    margin-bottom: 20px;
+}
+
+.article-title {
+    border-bottom: 1px solid #E5E5E5;
+    padding-bottom: 16px;
+    color: #262626;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 46px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.article-meta-info {
+    flex-direction: column;
+    font-size: 0.9rem;
+    color: #555;
+    border-bottom: 1px solid #E5E5E5;
+    padding-bottom: 16px;
+}
+
+.article-image {
+    text-align: left; /* Centraliza a imagem */
+    margin-bottom: 20px;
+}
+
+.article-image img {
+    max-width: 100%; 
+    border-radius: 5px;
+}
+
+.image-caption {
+    font-size: 0.8rem;
+    color: #777;
+    margin-top: 5px;
+    text-align: left; 
+}
+
+.article-text {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #333;
+    text-align: justify;
+}
+
+article blockquote {
+    background-color: #f0f0f0;
+    border-left: 5px solid #333;
+    padding: 15px;
+    margin: 20px 0;
+}
+
+/* Estilos para o rodapé */
+footer {
+    background-color: #003b55; 
+    color: #fff;
+    padding: 15px 0;
+    font-size: 14px;
+    text-align: center;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    top: 100vh;
+}
+
+footer .copyright {
+    font-size: 0.8rem;
+}
+
+.article-header {
+    background-color: rgb(255, 255, 255);
+    padding: 0; /* Remova qualquer padding desnecessário */
+}
+
+.article-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav ul {
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    article h1 {
+        font-size: 1.8rem;
+    }
+
+    article p {
+        font-size: 1rem;
+    }
+}
