@@ -9,18 +9,27 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
     color: #333; /* Cor do texto padrão */
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
 }
 
 /* Estilos para o cabeçalho */
 header {
     background-color: #003b55; 
     color: #fff;
-    padding: 20px 0;
+    padding: 20px ;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0;
     border: none;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 .logo img {
@@ -63,30 +72,13 @@ nav ul li a:hover {
     color: #333;
 }
 
-/* Estilos para títulos de categoria */
-.category-title {
-    background-color: #003b55; 
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.category-title h2, #category-name {
-    font-size: 28px;
-    margin: 0;
-    font-weight: bold;
-    padding: 20px;
-    color: #333;
-}
-
 
 /* Estilos do carrossel de imagens */
 .image-gallery {
     text-align: center;
     position: relative;
     width: 100vw; /* Largura da tela inteira */
-    height: calc(100vh - 20px); /* Altura da tela inteira menos 20px de espaço */
+    height: calc(100vh - 47px); /* Altura da tela inteira menos 20px de espaço */
     overflow: hidden;
     margin-top: 0; /* Remova qualquer margem superior */
     padding-top: 0;
@@ -130,21 +122,12 @@ nav ul li a:hover {
     transition: opacity 0.3s ease-in-out;
 }
 
-#prevBtn:hover,
-#nextBtn:hover {
-    background-color: rgba(0, 0, 0, 0.5); /* Aumenta a opacidade ao passar o mouse */
-}
-
 #prevBtn {
     left: 10px;
-    border-top-left-radius: 50%;
-    border-bottom-left-radius: 50%;
 }
 
 #nextBtn {
     right: 10px;
-    border-top-right-radius: 50%;
-    border-bottom-right-radius: 50%;
 }
 
 
@@ -176,37 +159,12 @@ footer {
     top: 100vh;
 }
 
-/* Estilizando o título da notícia completa */
-.full-news h3 {
-    font-size: 30px; /* Tamanho de fonte maior */
-    font-weight: bold;
-    color: #333;
-    text-align: center;
-    margin: 20px 0; /* Espaçamento superior e inferior aumentado */
-}
-
-/* Estilizando o conteúdo do artigo */
-.full-news .article-content {
-    font-size: 18px; /* Tamanho de fonte para o conteúdo */
-    line-height: 1.6;
-    color: #333; /* Cor do texto mais escura */
-    margin: 15px 0; /* Espaçamento vertical entre parágrafos */
-}
-
-/* Estilizando o autor e a data */
-.full-news .news-details {
-    font-size: 14px;
-    color: #777;
-    text-align: right;
-    margin-top: 10px;
-}
 
 /* Estilos para a Seção de Notícias */
 .news-section {
-    background-color: #f9f9f9; /* Altere a cor de fundo conforme desejado */
+    background-color: #ffffff; /* Altere a cor de fundo conforme desejado */
     padding: 20px;
     margin-bottom: 20px;
-    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px; /* Borda arredondada */
 }
 
@@ -220,7 +178,7 @@ footer {
     width: 33%; /* Ajuste a largura conforme necessário */
     padding: 10px;
     box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    text-align: justify;
     background-color: #fff; /* Fundo branco para cada bloco */
     border-radius: 5px; /* Borda arredondada */
     margin-bottom: 20px;
@@ -267,8 +225,6 @@ footer {
     background-color: #fff; /* Plano de fundo branco */
     padding: 0px;
     color: #333; /* Cor do texto */
-    border-radius: 10px; /* Borda arredondada */
-    margin-bottom: 20px;
 }
 
 .sports-score .section-title {
@@ -281,26 +237,22 @@ footer {
     flex-wrap: wrap; /* Para lidar com vários blocos em várias linhas */
     justify-content: space-between;
     padding: 5px; /* Espaçamento interno */
+    border-bottom: 1px solid #E5E5E5;
+    border-top: 1px solid #E5E5E5;
+    margin-top: 15px;
 }
 
 .score-block {
-    width: calc(25% - 35px); /* Distribuição em duas colunas com margens entre elas */
-    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+    width: calc(25% - 5px); /* Distribuição em duas colunas com margens entre elas */
     text-align: center;
-    background-color: #fff; /* Fundo branco para cada bloco */
-    border-radius: 5px; /* Borda arredondada */
-    margin-bottom: 10px;
-    transition: transform 0.3s ease; /* Efeito de transformação ao passar o mouse */
     display: flex;
     flex-direction: row;
     justify-content: space-evenly; /* Alinha os elementos internos à esquerda e à direita */
     align-items: center;
     padding: 15px;
+    border-left: 1px solid #E5E5E5;
 }
 
-.score-block:hover {
-    transform: translateY(-8px); /* Efeito de elevação ao passar o mouse */
-}
 
 .team-info {
     display: flex;
@@ -346,3 +298,119 @@ footer {
     text-decoration: underline;
 } 
 
+/* Estilos para o artigo */
+.article-art {
+    max-width: 80%; /* Limita o artigo a 70% da largura da página */
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+.article-art-header {
+    text-align: left; 
+    margin-bottom: 20px;
+}
+
+.article-art-title {
+    border-bottom: 1px solid #E5E5E5;
+    padding-bottom: 16px;
+    color: #262626;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 46px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.article-art-meta-info {
+    flex-direction: column;
+    font-size: 0.9rem;
+    color: #555;
+    border-bottom: 1px solid #E5E5E5;
+    padding-bottom: 16px;
+}
+
+.article-art-image {
+    text-align: left; /* Centraliza a imagem */
+    margin-bottom: 20px;
+}
+
+.article-art-image img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.image-caption {
+    font-size: 0.8rem;
+    color: #777;
+    margin-top: 5px;
+    text-align: left; 
+}
+
+.article-art-text {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #333;
+    text-align: justify;
+}
+
+.article-art-text::before {
+    content: "\00a0"; 
+  }
+
+.article-blockquote {
+    background-color: #f0f0f0;
+    border-left: 5px solid #333;
+    padding: 15px;
+    margin: 20px 0;
+}
+
+.article-art-header {
+    background-color: rgb(255, 255, 255);
+    padding: 0; /* Remova qualquer padding desnecessário */
+}
+
+.article-art-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.news-container-category {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    width: 100%;
+    overflow: hidden;
+    margin: 20px;
+}
+
+.news-block-category {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.news-image-category {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+
+.news-content-category {
+    flex: 2;
+    padding: 20px;
+}
+
+
+.author-category, .date-category {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #777;
+}

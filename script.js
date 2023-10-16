@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Event listeners para as categorias
+
+    
     const categories = document.querySelectorAll("nav ul li a");
     const categoryTitle = document.getElementById("category-name");
-
     const logoImage = document.getElementById("logo-image");
     logoImage.addEventListener("click", function () {
         window.location.href = "index.html";
