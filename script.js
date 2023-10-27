@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const categoryTitle = document.getElementById("category-name");
     const logoImage = document.getElementById("logo-image");
     logoImage.addEventListener("click", function () {
-        window.location.href = "index.html";
+        window.location.href = "capnews.html";
     });
 
     const carouselSlide = document.querySelector(".carousel-slide");

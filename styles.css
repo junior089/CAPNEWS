@@ -18,19 +18,6 @@ body {
 
 }
 
-/* Estilos para o cabeçalho */
-header {
-    background-color: #003b55; 
-    color: #fff;
-    padding: 20px ;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0;
-    border: none;
-    width: 100%;
-    margin-bottom: 20px;
-}
 
 .logo img {
     max-width: 150px;
@@ -83,6 +70,7 @@ nav ul li a:hover {
     margin-top: 0; /* Remova qualquer margem superior */
     padding-top: 0;
     border: none;
+    display: flex;
 }
 
 
@@ -93,6 +81,7 @@ nav ul li a:hover {
     justify-content: center;
     align-items: center;
     height: 100%;
+    display: flex;
 }
 
 .carousel-slide {
@@ -105,6 +94,7 @@ nav ul li a:hover {
     max-height: 100%;
     object-fit: cover; /* A imagem cobre todo o contêiner */
     margin: 0 auto;
+    display: flex;
 }
 
 #prevBtn,

@@ -7,7 +7,8 @@
       "default",
       {
         "ignore": [
-          "width: fit-content"
+          "width: fit-content",
+          "-webkit-text-size-adjust"
         ]
       }
     ],
@@ -15,6 +16,12 @@
       "default",
       {
         "html-has-lang": "off"
+      }
+    ],
+    "axe/forms": [
+      "default",
+      {
+        "label": "off"
       }
     ]
   }
