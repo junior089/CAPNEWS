@@ -1,342 +1,269 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
+
+<head lang="pt-BR">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="CAP NEWS - Seu portal de notícias">
-    <meta name="keywords" content="notícias, economia, entretenimento, tecnologia, esportes, gastronomia, saúde, espiritual, política">
-    <title>CAP NEWS</title>
-    <link rel="icon" href="imagens/logos/logo-adv.ico" type="image/x-icon">
+    <meta name="robots" content="max-image-preview:large">
+    <link rel="icon" type="image/png" sizes="32x32" href="imagens/logos/Escola/logo-adv.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="imagens/logos/Escola/logo-adv.ico">
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+    <title>CAPNEWS</title>
+    <meta name="description"
+        content="Você por dentro de tudo - Notícias ao vivo, fatos da política nacional e internacional no maior canal de notícias do mundo!" />
+    <link rel="canonical" href="https://capnews.com.br/" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Home" />
+    <meta property="og:description" content="CAP NEWS - Seu portal de noticias escolares" />
+    <meta property="og:url" content="https://capnews.com.br/" />
+    <meta property="og:site_name" content="Cap News" />
+    <meta property="article:publisher" content="https://www.instagram.com/portal.capnews" />
+    <meta property="og:image" content="imagens\logos\Escola\capnewsban.jpeg" />
+    <meta property="og:image:width" content="1920" />
+    <meta property="og:image:height" content="1080" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@capnews" />
     <link rel="stylesheet" href="styles.css">
-</head>
+    <link rel='preload' as='style' onload='this.onload=null;this.rel="stylesheet"' id='BlockNewEditorias'
+        href='blocknewseditoriais.css' media='all' />
+    <link rel='preload' as='style' onload='this.onload=null;this.rel="stylesheet"' id='BlockList-css'
+        href='blocklist.css' media='all' />
+    <link rel='preload' as='style' onload='this.onload=null;this.rel="stylesheet"' id='wp-mediaelement-css'
+        href='wp-medialemnt.css' media='all' />
+    <link rel='preload' as='style' onload='this.onload=null;this.rel="stylesheet"' id='performace-css-concat'
+        href='performace-css-concat.css' media='all' />
+    <link rel="stylesheet" type="text/css" id="wp-custom-css" href="wp-custom.css" />
+    <link rel="stylesheet" href="header.css">
+
 <body>
-    <header>
-        <div class="logo">
-            <img id="logo-image" src="imagens/logos/Escola/LogoEA-topo.png" alt="CAP NEWS">
+    <header class="main__header main__header--has-central">
+        <h1 class="site__main__title">CAP NEWS</h1>
+        <div class="container">
+            <input type="checkbox" class="header__trigger" id="header__trigger" name="header__trigger">
+            <div class="header__menu">
+                <div class="menu__hamburguer">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <a href="/">
+                    <img alt="CAP NEWS" class="header__menu__logo" src="imagens/logos/Escola/logo adv (2).png">
+                </a>
+                <div class="menu__encapsulators">
+                    <label for="header__trigger"></label>
+                    <ul class="menu__editorials">
+                        <li class="menu-item economia">
+                            <a href="economia.html" title="economia">Economia </a>
+                        </li>
+                        <li class="menu-item entrerterimento">
+                            <a href="entrerterimento.html" title="entrerterimento">Entrerterimento</a>
+                        </li>
+                        <li class="menu-item educacao">
+                            <a href="educação.html" title="educacao">Educação </a>
+                        </li>
+                        <li class="menu-item espiritual">
+                            <a href="espiritual.html" title="espirital">Espiritual </a>
+                        </li>
+                        <li class="menu-item esportes">
+                            <a href="esportes.html" title="esportes">Esportes</a>
+                        </li>
+                        <li class="menu-item gastronomia">
+                            <a href="gastronomia.html" title="gastronomia">Gastronomia</a>
+                        </li>
+                        <li class="menu-item politica">
+                            <a href="politica.html" title="politica">Política </a>
+                        </li>
+                        <li class="menu-item saude">
+                            <a href="saude.html" title="saude">Saúde </a>
+                        </li>
+                        <li class="menu-item tecnologia">
+                            <a href="ciencias.html" title="tecnologia">Tecnologia</a>
+                        </li>
+                        <li class="ancoras menu-item equipe-CAPNEWS">
+                            <a href="" title="Equipe CAP NEWS">Equipe CAP NEWS </a>
+                        <li class="sobre-o-capnews menu-item sobre-o-capnews">
+                            <a href="" title="Sobre o CAP NEWS">Sobre o CAP NEWS </a>
+                        </li>
+                </div>
+            </div>
+            <div class="header__central__itens">
+                <ul class="header__featured__links">
+                    <li><a href="ciencias.html" data-category="tecnologia">Ciências e Tecnologia</a></li>
+                    <li><a href="educação.html">Educação</a></li>
+                    <li><a href="economia.html">Economia</a></li>
+                    <li><a href="entrerterimento.html" data-category="entretenimento">Entretenimento e Cultura</a></li>
+                    <li><a href="esportes.html">Esportes</a></li>
+                    <li><a href="espiritual.html" data-category="espiritual">Espiritual</a></li>
+                    <li><a href="gastronomia.html" data-category="gastronomia">Gastronomia</a></li>
+                    <li><a href="politica.html" data-category="politica">Política</a></li>
+                    <li><a href="saude.html" data-category="saude">Saúde</a></li>
+                </ul>
+            </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="economia.html">Economia</a></li>
-                <li><a href="#" data-category="entretenimento">Entretenimento e Cultura</a></li>
-                <li><a href="#" data-category="tecnologia">Ciências e Tecnologia</a></li>
-                <li><a href="esportes.html"> Esportes</a></li>
-                <li><a href="#" data-category="gastronomia">Gastronomia</a></li>
-                <li><a href="#" data-category="saude">Saúde</a></li>
-                <li><a href="#" data-category="espiritual">Espiritual</a></li>
-                <li><a href="#" data-category="politica">Política</a></a></li>
-                <li><a href="#" data-category="educação">Educação</a></li>
-            </ul>
-        </nav>
     </header>
-    
+
     <main>
-        <!-- Galeria de Imagens -->
-        <section class="image-gallery">
-            <div class="carousel-container">
-                <div class="carousel-slide">
-                    <img src="imagens/carrossel/teste1.jpg" alt="Imagem 1">
-                    <img src="imagens/carrossel/teste2.jpg" alt="Imagem 2">
-                    <img src="imagens/carrossel/teste3.jpg" alt="Imagem 3">
-                </div>
-                <button id="prevBtn"><</button>
-                <button id="nextBtn">></button>
-            </div>
-        </section>
-
-        <!-- Placar de Esportes -->
-<section class="sports-score">
-    <div class="score-container">
-        <!-- Bloco de Placar 1 -->
-        <div class="score-block">
-            <div class="team-info">
-                <img src="imagens/logos/times/logo-chelsea.png" alt="logo-chelsea" class="team-logo">
-                <h3 class="team-name">Chelsea</h3>
-            </div>
-            <div class="score">
-                <span class="team-score">3</span>
-                <span class="divider">-</span>
-                <span class="team-score">2</span>
-            </div>
-            <div class="team-info">
-                <img src="imagens/logos/times/logo-psg.png" alt="Logo-psg" class="team-logo">
-                <h3 class="team-name">PSG</h3>
-            </div>
-        </div>
-
-        <!-- Bloco de Placar 2 -->
-        <div class="score-block">
-            <div class="team-info">
-                <img src="imagens/logos/times/logo-man.unt.png" alt="Logo manchester united" class="team-logo">
-                <h3 class="team-name">Man United</h3>
-            </div>
-            <div class="score">
-                <span class="team-score">1</span>
-                <span class="divider">-</span>
-                <span class="team-score">1</span>
-            </div>
-            <div class="team-info">
-                <img src="imagens/logos/times/manchester.png" alt="Logo manchester city" class="team-logo">
-                <h3 class="team-name">Man City</h3>
-            </div>
-        </div>
-
-                <!-- Bloco de Placar 3 -->
-                <div class="score-block">
-                    <div class="team-info">
-                        <img src="imagens/logos/times/real-madrid-logo.png" alt="Logo real-madrid-" class="team-logo">
-                        <h3 class="team-name">Real Madrid</h3>
-                    </div>
-                    <div class="score">
-                        <span class="team-score">0</span>
-                        <span class="divider">-</span>
-                        <span class="team-score">5</span>
-                    </div>
-                    <div class="team-info">
-                        <img src="imagens/logos/times/FCBarcelona.png" alt="Logo Barcelona" class="team-logo">
-                        <h3 class="team-name">Barcelona</h3>
-                    </div>
-                </div>
-
-                        <!-- Bloco de Placar 4 -->
-        <div class="score-block">
-            <div class="team-info">
-                <img src="imagens/logos/times/milan.png" alt="logo-milan" class="team-logo">
-                <h3 class="team-name">Milan</h3>
-            </div>
-            <div class="score">
-                <span class="team-score">4</span>
-                <span class="divider">-</span>
-                <span class="team-score">3</span>
-            </div>
-            <div class="team-info">
-                <img src="imagens/logos/times/borussia.png" alt="Logo-borussia" class="team-logo">
-                <h3 class="team-name">Borussia </h3>
-            </div>
-        </div>
-
-    </div>
-</section>
 
 
-        <!-- Seção de Notícias -->
-<section class="news-section">
-    <div class="news-container">
-        <!-- Bloco de Notícia 1 -->
-        <div class="news-block">
-            <img src="imagens/noticias/israel destruida.jpg" alt="Notícia 1">
-            <h3>Israel</h3>
-            <p>Reunião do Conselho de Segurança da ONU sobre conflito em Israel termina sem declaração final</p>
-            <a href="#">Leia mais</a>
-        </div>
-
-        <!-- Bloco de Notícia 2 -->
-        <div class="news-block">
-            <img src="imagens/noticias/tite.jpg" alt="Notícia 2">
-            <h3>Flamengo e Tite chegam a acordo, e técnico assinará contrato até 2024</h3>
-            <p>A contratação de Tite está perto de ser oficializada pelo Flamengo. Ao longo do fim de semana, a diretoria carioca reuniu-se com Gilmar Veloz, empresário do técnico, avançou na negociação e, enfim, o treinador irá assinar o contrato com o Rubro-Negro. O vínculo será válido até dezembro de 2024.</p>
-            <a href="tite.html">Leia mais</a>
-        </div>
-
-        <!-- Bloco de Notícia 3 -->
-        <div class="news-block">
-            <img src="imagens/noticias/alok.jpg" alt="Notícia 3">
-            <a href="alok.html">
-            <h3>DJ Alok diz que seu pai está abrigado em bunker em Israel</h3>
-            </a>
-            <p>Alok afirmou, neste domingo (8), que seu pai, o também DJ Juarez Petrillo, está salvo e abrigado em um bunker em Israel após os ataques feitos pelo Hamas, classificado pelos Estados Unidos e pela União Europeia como grupo terrorista, desde sábado (7).
-                Nas redes, o DJ contou que seu pai quer voltar ao Brasil e aguarda um direcionamento das autoridades para viajar.</p>
-        </div>
-
-        <!-- Bloco de Notícia 4 -->
-        <div class="news-block">
-            <img src="imagens/noticias/afeganistao-mortos.jpg" alt="Notícia 4">
-            <a href="#"
-            <h3>Terremoto no Afeganistão deixa mais de 2 mil mortos e 9 mil feridos, diz Talibã</h3>
-            </a>
-        </div>
-        <!-- Bloco de Notícia 5 -->
-        <div class="news-block">
-            <img src="imagens/noticias/verstappen.jpg" alt="Notícia 5">
-            <a href="verstapen.html"
-            <h3>Tricampeão da Fórmula 1, Max Verstappen vence com folga o GP do Catar</h3>
-            </a>
-            <p
-            >Max Verstappen sentou no cockpit neste domingo (8) já tricampeão do mundo. Usou até um capacete comemorativo, com a terceira estrela estampada na pintura.</p>
-        </div>
-        <!-- Bloco de Notícia 6 -->
-        <div class="news-block">
-            <img src="imagens/noticias/neymar.jpg" alt="Notícia 3">
-            <a href="#"
-            <h3>Filha de Neymar e Bruna Biancardi, Mavie nasce em São Paulo</h3>
-            </a>
-        </div>
-                <!-- Bloco de Notícia 1 -->
-                <div class="news-block">
-                    <img src="imagens/noticias/israel destruida.jpg" alt="Notícia 1">
-                    <h3>Israel</h3>
-                    <p>Reunião do Conselho de Segurança da ONU sobre conflito em Israel termina sem declaração final</p>
-                    <a href="#">Leia mais</a>
-                </div>
-        
-                <!-- Bloco de Notícia 2 -->
-                <div class="news-block">
-                    <img src="imagens/noticias/tite.jpg" alt="Notícia 2">
-                    <h3>Flamengo e Tite chegam a acordo, e técnico assinará contrato até 2024</h3>
-                    <p>A contratação de Tite está perto de ser oficializada pelo Flamengo. Ao longo do fim de semana, a diretoria carioca reuniu-se com Gilmar Veloz, empresário do técnico, avançou na negociação e, enfim, o treinador irá assinar o contrato com o Rubro-Negro. O vínculo será válido até dezembro de 2024.</p>
-                    <a href="tite.html">Leia mais</a>
-                </div>
-        
-                <!-- Bloco de Notícia 3 -->
-                <div class="news-block">
-                    <img src="imagens/noticias/alok.jpg" alt="Notícia 3">
-                    <h3>DJ Alok diz que seu pai está abrigado em bunker em Israel</h3>
-                    <p>Alok afirmou, neste domingo (8), que seu pai, o também DJ Juarez Petrillo, está salvo e abrigado em um bunker em Israel após os ataques feitos pelo Hamas, classificado pelos Estados Unidos e pela União Europeia como grupo terrorista, desde sábado (7).
-                        Nas redes, o DJ contou que seu pai quer voltar ao Brasil e aguarda um direcionamento das autoridades para viajar.</p>
-                    <a href="alok.html"> </a>
-                </div>
-        
-                <!-- Bloco de Notícia 4 -->
-                <div class="news-block">
-                    <img src="imagens/noticias/afeganistao-mortos.jpg" alt="Notícia 4">
-                    <a href="#"
-                    <h3>Terremoto no Afeganistão deixa mais de 2 mil mortos e 9 mil feridos, diz Talibã</h3>
-                    </a>
-                </div>
-                <!-- Bloco de Notícia 5 -->
-                <div class="news-block">
-                    <img src="imagens/noticias/verstappen.jpg" alt="Notícia 5">
-                    <a href="verstapen.html"
-                    <h3>Tricampeão da Fórmula 1, Max Verstappen vence com folga o GP do Catar</h3>
-                    </a>
-                </div>
-                <!-- Bloco de Notícia 6 -->
-                <div class="news-block">
-                    <img src="imagens/noticias/neymar.jpg" alt="Notícia 3">
-                    <a href="#"
-                    <h3>Filha de Neymar e Bruna Biancardi, Mavie nasce em São Paulo</h3>
-                    </a>
-                </div>
-                        <!-- Bloco de Notícia 1 -->
-        <div class="news-block">
-            <img src="imagens/noticias/israel destruida.jpg" alt="Notícia 1">
-            <h3>Israel</h3>
-            <p>Reunião do Conselho de Segurança da ONU sobre conflito em Israel termina sem declaração final</p>
-            <a href="#">Leia mais</a>
-        </div>
-
-        <!-- Bloco de Notícia 2 -->
-        <div class="news-block">
-            <img src="imagens/noticias/tite.jpg" alt="Notícia 2">
-            <h3>Flamengo e Tite chegam a acordo, e técnico assinará contrato até 2024</h3>
-            <p>A contratação de Tite está perto de ser oficializada pelo Flamengo. Ao longo do fim de semana, a diretoria carioca reuniu-se com Gilmar Veloz, empresário do técnico, avançou na negociação e, enfim, o treinador irá assinar o contrato com o Rubro-Negro. O vínculo será válido até dezembro de 2024.</p>
-            <a href="#">Leia mais</a>
-        </div>
-
-        <!-- Bloco de Notícia 3 -->
-        <div class="news-block">
-            <img src="imagens/noticias/alok.jpg" alt="Notícia 3">
-            <h3>DJ Alok diz que seu pai está abrigado em bunker em Israel</h3>
-            <p>Alok afirmou, neste domingo (8), que seu pai, o também DJ Juarez Petrillo, está salvo e abrigado em um bunker em Israel após os ataques feitos pelo Hamas, classificado pelos Estados Unidos e pela União Europeia como grupo terrorista, desde sábado (7).
-                Nas redes, o DJ contou que seu pai quer voltar ao Brasil e aguarda um direcionamento das autoridades para viajar.</p>
-            <a href="#">Leia mais</a>
-        </div>
-
-        <!-- Bloco de Notícia 4 -->
-        <div class="news-block">
-            <img src="imagens/noticias/afeganistao-mortos.jpg" alt="Notícia 4">
-            <a href="#"
-            <h3>Terremoto no Afeganistão deixa mais de 2 mil mortos e 9 mil feridos, diz Talibã</h3>
-            </a>
-        </div>
-        <!-- Bloco de Notícia 5 -->
-        <div class="news-block">
-            <img src="imagens/noticias/verstappen.jpg" alt="Notícia 5">
-            <a href="#"
-            <h3>Tricampeão da Fórmula 1, Max Verstappen vence com folga o GP do Catar</h3>
-            </a>
-        </div>
-        <!-- Bloco de Notícia 6 -->
-        <div class="news-block">
-            <img src="imagens/noticias/neymar.jpg" alt="Notícia 3">
-            <a href="#"
-            <h3>Filha de Neymar e Bruna Biancardi, Mavie nasce em São Paulo</h3>
-            </a>
-        </div>
-                <!-- Bloco de Notícia 1 -->
-                <div class="news-block">
-                    <img src="imagens/noticias/israel destruida.jpg" alt="Notícia 1">
-                    <h3>Israel</h3>
-                    <p>Reunião do Conselho de Segurança da ONU sobre conflito em Israel termina sem declaração final</p>
-                    <a href="#">Leia mais</a>
-                </div>
-        
-                <!-- Bloco de Notícia 2 -->
-                <div class="news-block">
-                    <img src="imagens/noticias/tite.jpg" alt="Notícia 2">
-                    <h3>Flamengo e Tite chegam a acordo, e técnico assinará contrato até 2024</h3>
-                    <p>A contratação de Tite está perto de ser oficializada pelo Flamengo. Ao longo do fim de semana, a diretoria carioca reuniu-se com Gilmar Veloz, empresário do técnico, avançou na negociação e, enfim, o treinador irá assinar o contrato com o Rubro-Negro. O vínculo será válido até dezembro de 2024.</p>
-                    <a href="#">Leia mais</a>
-                </div>
-        
-                <!-- Bloco de Notícia 3 -->
-                <div class="news-block">
-                    <img src="imagens/noticias/alok.jpg" alt="Notícia 3">
-                    <h3>DJ Alok diz que seu pai está abrigado em bunker em Israel</h3>
-                    <p>Alok afirmou, neste domingo (8), que seu pai, o também DJ Juarez Petrillo, está salvo e abrigado em um bunker em Israel após os ataques feitos pelo Hamas, classificado pelos Estados Unidos e pela União Europeia como grupo terrorista, desde sábado (7).
-                        Nas redes, o DJ contou que seu pai quer voltar ao Brasil e aguarda um direcionamento das autoridades para viajar.</p>
-                    <a href="#">Leia mais</a>
-                </div>
-        
-                <!-- Bloco de Notícia 4 -->
-                <div class="news-block">
-                    <img src="imagens/noticias/afeganistao-mortos.jpg" alt="Notícia 4">
-                    <a href="#"
-                    <h3>Terremoto no Afeganistão deixa mais de 2 mil mortos e 9 mil feridos, diz Talibã</h3>
-                    </a>
-                </div>
-                <!-- Bloco de Notícia 5 -->
-                <div class="news-block">
-                    <img src="imagens/noticias/verstappen.jpg" alt="Notícia 5">
-                    <a href="#"
-                    <h3>Tricampeão da Fórmula 1, Max Verstappen vence com folga o GP do Catar</h3>
-                    </a>
-                </div>
-                <!-- Bloco de Notícia 6 -->
-                <div class="news-block">
-                    <img src="imagens/noticias/neymar.jpg" alt="Notícia 3">
-                    <a href="#"
-                    <h3>Filha de Neymar e Bruna Biancardi, Mavie nasce em São Paulo</h3>
-                    </a>
-                </div>
-    </div>
-</section>
-
-
-
-        <!-- Notícias em Destaque -->
-        <section class="featured-news">
-            <div id="featured-news-container"></div>
-        </section>
-    
-        <!-- Notícias Recentes -->
-        <section class="recent-news">
-            <h2 class="section-subtitle"><span id="category-name"></span></h2>
-            <ul id="recent-news-list"></ul>
-        </section>
-
-        <!-- Conteúdo da Notícia Completa -->
-        <section class="full-news" id="full-news">
-            <div id="full-news-content"></div>
-        </section>
+        <!--ultimas notiicias-->
+        <section>
+            <div class="homepage__layout homepage__layout--seventy-thirty">
+                <div class="container">
+                    <div class="row">
+                        <div class="col__l--8 col--12">
+                            <section id="block1810887"
+                                class="business block--list block__type--block1810887 container latest__news"
+                                data-blockid="1810887">
+                                <h2 class="home__category">Últimas Notícias </h2>
+                                <div class="row">
+                                    <div class="posts">
+                                        <ul class="home__new">
+                                            <li class="home__list__item">
+                                                <a class="home__list__tag" href="tite.html" title="teste">
+                                                    <picture>
+                                                        <img loading="lazy" src="imagens/noticias/neymar.jpg"
+                                                            title="teste" alt="teste" />
+                                                    </picture>
+                                                    <div class="home__list__news">
+                                                        <div class="home__list__tag">
+                                                            <h3 class="news-item-header__title market__new__title">teste
+                                                            </h3>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <div class="latest__news__infos">
+                                                    <span class="home__title__date">teste </span>
+                                                    <a class="latest__news__tag" href="">
+                                                        <span class="latest__news__category">teste</span>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            <li class="home__list__item">
+                                                <a class="home__list__tag" href="tite.html" title="teste">
+                                                    <picture>
+                                                        <img loading="lazy" src="imagens/noticias/neymar.jpg"
+                                                            title="teste" alt="teste" />
+                                                    </picture>
+                                                    <div class="home__list__news">
+                                                        <div class="home__list__tag">
+                                                            <h3 class="news-item-header__title market__new__title">teste
+                                                            </h3>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <div class="latest__news__infos">
+                                                    <span class="home__title__date">teste </span>
+                                                    <a class="latest__news__tag" href="">
+                                                        <span class="latest__news__category">teste</span>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            <li class="home__list__item">
+                                                <a class="home__list__tag" href="tite.html" title="teste">
+                                                    <picture>
+                                                        <img loading="lazy" src="imagens/noticias/neymar.jpg"
+                                                            title="teste" alt="teste" />
+                                                    </picture>
+                                                    <div class="home__list__news">
+                                                        <div class="home__list__tag">
+                                                            <h3 class="news-item-header__title market__new__title">teste
+                                                            </h3>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <div class="latest__news__infos">
+                                                    <span class="home__title__date">teste </span>
+                                                    <a class="latest__news__tag" href="">
+                                                        <span class="latest__news__category">teste</span>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            <li class="home__list__item">
+                                                <a class="home__list__tag" href="tite.html" title="teste">
+                                                    <picture>
+                                                        <img loading="lazy" src="imagens/noticias/neymar.jpg"
+                                                            title="teste" alt="teste" />
+                                                    </picture>
+                                                    <div class="home__list__news">
+                                                        <div class="home__list__tag">
+                                                            <h3 class="news-item-header__title market__new__title">teste
+                                                            </h3>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <div class="latest__news__infos">
+                                                    <span class="home__title__date">teste </span>
+                                                    <a class="latest__news__tag" href="">
+                                                        <span class="latest__news__category">teste</span>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            <li class="home__list__item">
+                                                <a class="home__list__tag" href="tite.html" title="teste">
+                                                    <picture>
+                                                        <img loading="lazy" src="imagens/noticias/neymar.jpg"
+                                                            title="teste" alt="teste" />
+                                                    </picture>
+                                                    <div class="home__list__news">
+                                                        <div class="home__list__tag">
+                                                            <h3 class="news-item-header__title market__new__title">teste
+                                                            </h3>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <div class="latest__news__infos">
+                                                    <span class="home__title__date">teste </span>
+                                                    <a class="latest__news__tag" href="">
+                                                        <span class="latest__news__category">teste</span>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            <li class="home__list__item">
+                                                <a class="home__list__tag" href="tite.html" title="teste">
+                                                    <picture>
+                                                        <img loading="lazy" src="imagens/noticias/neymar.jpg"
+                                                            title="teste" alt="teste" />
+                                                    </picture>
+                                                    <div class="home__list__news">
+                                                        <div class="home__list__tag">
+                                                            <h3 class="news-item-header__title market__new__title">teste
+                                                            </h3>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <div class="latest__news__infos">
+                                                    <span class="home__title__date">teste </span>
+                                                    <a class="latest__news__tag" href="">
+                                                        <span class="latest__news__category">teste</span>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            <li class="home__list__item">
+                                                <a class="home__list__tag" href="tite.html" title="teste">
+                                                    <picture>
+                                                        <img loading="lazy" src="imagens/noticias/neymar.jpg"
+                                                            title="teste" alt="teste" />
+                                                    </picture>
+                                                    <div class="home__list__news">
+                                                        <div class="home__list__tag">
+                                                            <h3 class="news-item-header__title market__new__title">teste
+                                                            </h3>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <div class="latest__news__infos">
+                                                    <span class="home__title__date">teste </span>
+                                                    <a class="latest__news__tag" href="">
+                                                        <span class="latest__news__category">teste</span>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                    </div>
+                                </div>
+                        </div>
     </main>
 
-    <footer>
-        <p>&copy; 2023 Educação Adventista. Todos os direitos reservados.</p>
-    </footer>
-
-    <script src="news.js"></script>
-    <script src="script.js"></script>
-
 </body>
-<script src="script.js"></script>
+
 </html>

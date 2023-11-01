@@ -1,36 +1,97 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
+
+<head lang="pt-BR">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="CAP NEWS - Seu portal de notícias">
-    <meta name="keywords" content="notícias, economia, entretenimento, tecnologia, esportes, gastronomia, saúde, espiritual, política">
-    <meta http-equiv="content-language" content="pt-BR">
-    <meta name="copyright" content="&copy; 2023 Educação Adventista. Todos os direitos reservados.">
+    <meta name="keywords"
+        content="notícias, economia, entretenimento, tecnologia, esportes, gastronomia, saúde, espiritual, política">
     <title>CAP NEWS</title>
-    <link rel="icon" href="imagens/logos/Escola/logo-adv.ico" type="image/x-icon">
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Home" />
+    <meta property="og:site_name" content="CAP NEWS" />
+    <link rel="icon" href="imagens/logos/logo-adv.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
-</head>
+    <link rel='preload' as='style' onload='this.onload=null;this.rel="stylesheet"' id='BlockNewEditorias'
+        href='blocknewseditoriais.css' media='all' />
+    <link rel='preload' as='style' onload='this.onload=null;this.rel="stylesheet"' id='BlockList-css'
+        href='blocklist.css' media='all' />
+    <link rel='preload' as='style' onload='this.onload=null;this.rel="stylesheet"' id='wp-mediaelement-css'
+        href='wp-medialemnt.css' media='all' />
+    <link rel='preload' as='style' onload='this.onload=null;this.rel="stylesheet"' id='performace-css-concat'
+        href='performace-css-concat.css' media='all' />
+    <link rel="stylesheet" type="text/css" id="wp-custom-css" href="wp-custom.css" />
+    <link rel="stylesheet" href="header.css">
+
 <body>
-    <header>
-        <div class="logo">
-            <img id="logo-image" src="imagens/logos/Escola/LogoEA-topo.png" alt="CAP NEWS">
+    <header class="main__header main__header--has-central">
+        <h1 class="site__main__title">CAP NEWS</h1>
+        <div class="container">
+            <input type="checkbox" class="header__trigger" id="header__trigger" name="header__trigger">
+            <div class="header__menu">
+                <div class="menu__hamburguer">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <a href="/">
+                    <img alt="CAP NEWS" class="header__menu__logo" src="imagens/logos/Escola/logo adv (2).png">
+                </a>
+                <div class="menu__encapsulators">
+                    <label for="header__trigger"></label>
+                    <ul class="menu__editorials">
+                        <li class="menu-item economia">
+                            <a href="economia.html" title="economia">Economia </a>
+                        </li>
+                        <li class="menu-item entrerterimento">
+                            <a href="entrerterimento.html" title="entrerterimento">Entrerterimento</a>
+                        </li>
+                        <li class="menu-item tecnologia">
+                            <a href="ciencias.html" title="tecnologia">Tecnologia</a>
+                        </li>
+                        <li class="menu-item esportes">
+                            <a href="esportes.html" title="esportes">Esportes</a>
+                        </li>
+                        <li class="menu-item gastronomia">
+                            <a href="gastronomia.html" title="gastronomia">Gastronomia</a>
+                        <li class="menu-item saude">
+                            <a href="saude.html" title="saude">Saúde </a>
+                        </li>
+                        <li class="menu-item espiritual">
+                            <a href="espiritual.html" title="espirital">Espiritual </a>
+                        </li>
+                        <li class="menu-item politica">
+                            <a href="politica.html" title="politica">Política </a>
+                        </li>
+                        <li class="menu-item educacao">
+                            <a href="educação.html" title="educacao">Educação </a>
+                        </li>
+                        <li class="ancoras menu-item equipe-CAPNEWS">
+                            <a href="" title="Equipe CAP NEWS">Equipe CAP NEWS </a>
+                        <li class="sobre-o-capnews menu-item sobre-o-capnews">
+                            <a href="" title="Sobre o CAP NEWS">Sobre o CAP NEWS </a>
+                        </li>
+                </div>
+            </div>
+            <div class="header__central__itens">
+                <ul class="header__featured__links">
+                    <li><a href="economia.html">Economia</a></li>
+                    <li><a href="entrerterimento.html" data-category="entretenimento">Entretenimento e Cultura</a></li>
+                    <li><a href="ciencias.html" data-category="tecnologia">Ciências e Tecnologia</a></li>
+                    <li><a href="esportes.html">Esportes</a></li>
+                    <li><a href="gastronomia.html" data-category="gastronomia">Gastronomia</a></li>
+                    <li><a href="saude.html" data-category="saude">Saúde</a></li>
+                    <li><a href="espiritual.html" data-category="espiritual">Espiritual</a></li>
+                    <li><a href="politica.html" data-category="politica">Política</a></li>
+                    <li><a href="educação.html">Educação</a>
+                    <li>
+                </ul>
+            </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#" data-category="economia">Economia</a></li>
-                <li><a href="#" data-category="entretenimento">Entretenimento e Cultura</a></li>
-                <li><a href="#" data-category="tecnologia">Ciências e Tecnologia</a></li>
-                <li><a href="esportes.html">Esportes</a></li>
-                <li><a href="#" data-category="gastronomia">Gastronomia</a></li>
-                <li><a href="#" data-category="saude">Saúde</a></li>
-                <li><a href="#" data-category="espiritual">Espiritual</a></li>
-                <li><a href="#" data-category="politica">Política</a></a></li>
-            </ul>
-        </nav>
     </header>
-    
-    
+
+
     <article class="article-art">
         <div class="container">
             <header class="article-art-header">
@@ -39,38 +100,55 @@
 
             <figure class="article-art-image">
                 <img src="imagens/noticias/verstappen.jpg" alt="Imagem da matéria">
-                <figcaption class="image-caption">Max Verstappen venceu o GP do Catar para carimbar o tricampeonato mundial</figcaption>
+                <figcaption class="image-caption">Max Verstappen venceu o GP do Catar para carimbar o tricampeonato
+                    mundial</figcaption>
                 <p class="article-art-meta-info">Por: eu | 25/01/2077</p>
             </figure>
 
             <p class="article-art-text">
-            Max Verstappen sentou no cockpit neste domingo (8) já tricampeão do mundo. Usou até um capacete comemorativo, com a terceira estrela estampada na pintura.
+                Max Verstappen sentou no cockpit neste domingo (8) já tricampeão do mundo. Usou até um capacete
+                comemorativo, com a terceira estrela estampada na pintura.
             </p>
             <p class="article-art-text">
-            O Grande Prêmio do Catar foi mais um dos vários deste ano que Verstappen venceu com tranquilidade, fazendo até a melhor volta. Largou na ponta e cruzou a linha de chegada sem ser ameaçado, colocando uma volta de vantagem para o colega de Red Bull, Sergio Pérez, que é o segundo colocado no campeonato.
+                O Grande Prêmio do Catar foi mais um dos vários deste ano que Verstappen venceu com tranquilidade,
+                fazendo até a melhor volta. Largou na ponta e cruzou a linha de chegada sem ser ameaçado, colocando uma
+                volta de vantagem para o colega de Red Bull, Sergio Pérez, que é o segundo colocado no campeonato.
             </p>
             <p class="article-art-text">
-                Pérez era o único que, matematicamente, ainda tinCom 49 vitórias na carreira, Verstappen, aos 26 anos, já é o quinto maior vencedor da história da Fórmula 1. E, se vencer todas as cinco corridas que restam no ano, pode terminar 2023 como o terceiro com mais triunfos.
+                Pérez era o único que, matematicamente, ainda tinCom 49 vitórias na carreira, Verstappen, aos 26 anos,
+                já é o quinto maior vencedor da história da Fórmula 1. E, se vencer todas as cinco corridas que restam
+                no ano, pode terminar 2023 como o terceiro com mais triunfos.
 
-                A sequência pode parecer difícil, mas é muito possível, já que Max Verstappen venceu 14 das 17 etapas de 2023.
-                
-                O calendário ainda conta com os Grandes Prêmios dos Estados Unidos, México, Brasil, Las Vegas e Abu Dhabi.ha chance de ser campeão até este sábado (7). Mas, para isso, precisava vencer tudo em disputa até o fim da temporada e torcer para que Verstappen não marcasse mais do que dois pontos.
-            </p>
-            <p class="article-art-text">
-                Na corrida sprint, porém, Pérez sofreu uma batida com Esteban Ocon e as remotas chances foram por água abaixo. Além disso, Verstappen foi o segundo, chegando atrás apenas de Oscar Piastri, o novato australiano que tinha largado na ponta na corrida sprint.
-            </p>
-            <p class="article-art-text">
-                Com o título neste fim de semana, Max Verstappen entra para o clube dos tricampeões de Fórmula 1, que conta também com Jack Brabham, Jackie Stewart, Niki Lauda, Nelson Piquet e Ayrton Senna.
-            </p>
-            <p class="article-art-text">
-                Apenas Sebastian Vettel, Alain Prost, Juan Manuel Fangio, Michael Schumacher e Lewis Hamilton têm mais títulos.
-            </p>
-            <p class="article-art-text">
-                Com 49 vitórias na carreira, Verstappen, aos 26 anos, já é o quinto maior vencedor da história da Fórmula 1. E, se vencer todas as cinco corridas que restam no ano, pode terminar 2023 como o terceiro com mais triunfos.
+                A sequência pode parecer difícil, mas é muito possível, já que Max Verstappen venceu 14 das 17 etapas de
+                2023.
 
-                A sequência pode parecer difícil, mas é muito possível, já que Max Verstappen venceu 14 das 17 etapas de 2023.
-                
-                O calendário ainda conta com os Grandes Prêmios dos Estados Unidos, México, Brasil, Las Vegas e Abu Dhabi.
+                O calendário ainda conta com os Grandes Prêmios dos Estados Unidos, México, Brasil, Las Vegas e Abu
+                Dhabi.ha chance de ser campeão até este sábado (7). Mas, para isso, precisava vencer tudo em disputa até
+                o fim da temporada e torcer para que Verstappen não marcasse mais do que dois pontos.
+            </p>
+            <p class="article-art-text">
+                Na corrida sprint, porém, Pérez sofreu uma batida com Esteban Ocon e as remotas chances foram por água
+                abaixo. Além disso, Verstappen foi o segundo, chegando atrás apenas de Oscar Piastri, o novato
+                australiano que tinha largado na ponta na corrida sprint.
+            </p>
+            <p class="article-art-text">
+                Com o título neste fim de semana, Max Verstappen entra para o clube dos tricampeões de Fórmula 1, que
+                conta também com Jack Brabham, Jackie Stewart, Niki Lauda, Nelson Piquet e Ayrton Senna.
+            </p>
+            <p class="article-art-text">
+                Apenas Sebastian Vettel, Alain Prost, Juan Manuel Fangio, Michael Schumacher e Lewis Hamilton têm mais
+                títulos.
+            </p>
+            <p class="article-art-text">
+                Com 49 vitórias na carreira, Verstappen, aos 26 anos, já é o quinto maior vencedor da história da
+                Fórmula 1. E, se vencer todas as cinco corridas que restam no ano, pode terminar 2023 como o terceiro
+                com mais triunfos.
+
+                A sequência pode parecer difícil, mas é muito possível, já que Max Verstappen venceu 14 das 17 etapas de
+                2023.
+
+                O calendário ainda conta com os Grandes Prêmios dos Estados Unidos, México, Brasil, Las Vegas e Abu
+                Dhabi.
             </p>
         </div>
     </article>
@@ -81,6 +159,7 @@
         </div>
     </footer>
 
-    <script src="script.js"></script> 
+    <script src="script.js"></script>
 </body>
+
 </html>

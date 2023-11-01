@@ -1,66 +1,206 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
+
+<head lang="pt-BR">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="CAP NEWS - Seu portal de notícias">
-    <meta name="keywords" content="notícias, economia, entretenimento, tecnologia, esportes, gastronomia, saúde, espiritual, política">
-    <meta http-equiv="content-language" content="pt-BR">
-    <meta name="copyright" content="&copy; 2023 Educação Adventista. Todos os direitos reservados.">
+    <meta name="keywords"
+        content="notícias, economia, entretenimento, tecnologia, esportes, gastronomia, saúde, espiritual, política">
     <title>CAP NEWS</title>
-    <link rel="icon" href="imagens/logos/Escola/logo-adv.ico" type="image/x-icon">
-    <link rel="stylesheet" href="stylesn.css">
-</head>
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Home" />
+    <meta property="og:site_name" content="CAP NEWS" />
+    <link rel="icon" href="imagens/logos/logo-adv.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link rel='preload' as='style' onload='this.onload=null;this.rel="stylesheet"' id='BlockNewEditorias'
+        href='blocknewseditoriais.css' media='all' />
+    <link rel='preload' as='style' onload='this.onload=null;this.rel="stylesheet"' id='BlockList-css'
+        href='blocklist.css' media='all' />
+    <link rel='preload' as='style' onload='this.onload=null;this.rel="stylesheet"' id='wp-mediaelement-css'
+        href='wp-medialemnt.css' media='all' />
+    <link rel='preload' as='style' onload='this.onload=null;this.rel="stylesheet"' id='performace-css-concat'
+        href='performace-css-concat.css' media='all' />
+    <link rel="stylesheet" type="text/css" id="wp-custom-css" href="wp-custom.css" />
+    <link rel="stylesheet" href="header.css">
+
 <body>
-    <header>
-        <div class="logo">
-            <img id="logo-image" src="imagens/logos/Escola/LogoEA-topo.png" alt="CAP NEWS">
+    <header class="main__header main__header--has-central">
+        <h1 class="site__main__title">CAP NEWS</h1>
+        <div class="container">
+            <input type="checkbox" class="header__trigger" id="header__trigger" name="header__trigger">
+            <div class="header__menu">
+                <div class="menu__hamburguer">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <a href="/">
+                    <img alt="CAP NEWS" class="header__menu__logo" src="imagens/logos/Escola/logo adv (2).png">
+                </a>
+                <div class="menu__encapsulators">
+                    <label for="header__trigger"></label>
+                    <ul class="menu__editorials">
+                        <li class="menu-item economia">
+                            <a href="economia.html" title="economia">Economia </a>
+                        </li>
+                        <li class="menu-item entrerterimento">
+                            <a href="entrerterimento.html" title="entrerterimento">Entrerterimento</a>
+                        </li>
+                        <li class="menu-item tecnologia">
+                            <a href="ciencias.html" title="tecnologia">Tecnologia</a>
+                        </li>
+                        <li class="menu-item esportes">
+                            <a href="esportes.html" title="esportes">Esportes</a>
+                        </li>
+                        <li class="menu-item gastronomia">
+                            <a href="gastronomia.html" title="gastronomia">Gastronomia</a>
+                        <li class="menu-item saude">
+                            <a href="saude.html" title="saude">Saúde </a>
+                        </li>
+                        <li class="menu-item espiritual">
+                            <a href="espiritual.html" title="espirital">Espiritual </a>
+                        </li>
+                        <li class="menu-item politica">
+                            <a href="politica.html" title="politica">Política </a>
+                        </li>
+                        <li class="menu-item educacao">
+                            <a href="educação.html" title="educacao">Educação </a>
+                        </li>
+                        <li class="ancoras menu-item equipe-CAPNEWS">
+                            <a href="" title="Equipe CAP NEWS">Equipe CAP NEWS </a>
+                        <li class="sobre-o-capnews menu-item sobre-o-capnews">
+                            <a href="" title="Sobre o CAP NEWS">Sobre o CAP NEWS </a>
+                        </li>
+                </div>
+            </div>
+            <div class="header__central__itens">
+                <ul class="header__featured__links">
+                    <li><a href="economia.html">Economia</a></li>
+                    <li><a href="entrerterimento.html" data-category="entretenimento">Entretenimento e Cultura</a></li>
+                    <li><a href="ciencias.html" data-category="tecnologia">Ciências e Tecnologia</a></li>
+                    <li><a href="esportes.html">Esportes</a></li>
+                    <li><a href="gastronomia.html" data-category="gastronomia">Gastronomia</a></li>
+                    <li><a href="saude.html" data-category="saude">Saúde</a></li>
+                    <li><a href="espiritual.html" data-category="espiritual">Espiritual</a></li>
+                    <li><a href="politica.html" data-category="politica">Política</a></li>
+                    <li><a href="educação.html">Educação</a>
+                    <li>
+                </ul>
+            </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#" data-category="economia">Economia</a></li>
-                <li><a href="#" data-category="entretenimento">Entretenimento e Cultura</a></li>
-                <li><a href="#" data-category="tecnologia">Ciências e Tecnologia</a></li>
-                <li><a href="esportes.html">Esportes</a></li>
-                <li><a href="#" data-category="gastronomia">Gastronomia</a></li>
-                <li><a href="#" data-category="saude">Saúde</a></li>
-                <li><a href="#" data-category="espiritual">Espiritual</a></li>
-                <li><a href="#" data-category="politica">Política</a></a></li>
-            </ul>
-        </nav>
     </header>
-    
-    
+
+
     <article class="article-art">
         <div class="container">
             <header class="article-art-header">
-                <h1 class="article-art-title">Flamengo e Tite chegam a acordo, e técnico assinará contrato até 2024</h1>
+                <h1 class="article-art-title">Jogos Pan Pan-Americanos</h1>
             </header>
-            
+
 
             <figure class="article-art-image">
-                <img src="imagens/noticias/tite.jpg" alt="Imagem da matéria">
-                <figcaption class="image-caption">Treinador assumirá o comando da equipe ainda nesta semana</figcaption>
-                <p class="article-art-meta-info">Por: eu | 25/01/2077</p>
+                <img src="imagens/noticias/teste1 (1).jpeg" alt="Imagem da matéria">
+                <figcaption class="image-caption">Jogos Pan-americanos</figcaption>
+                <p class="article-art-meta-info">Por: Jair | 25/01/2077</p>
             </figure>
 
             <p class="article-art-text">
-            A contratação de Tite está perto de ser oficializada pelo Flamengo. Ao longo do fim de semana, a diretoria carioca reuniu-se com Gilmar Veloz, empresário do técnico, avançou na negociação e, enfim, o treinador irá assinar o contrato com o Rubro-Negro. O vínculo será válido até dezembro de 2024.
+                A equipe feminina de basquete do Brasil venceu a Argentina na noite de hoje
+                (28), em Santiago, e garantiu a vaga na final dos Jogos Pan-Americanos de
+                2023.
+                As brasileiras rapidamente construíram uma ótima vantagem, dominaram o
+                jogo e bateram as argentinas com tranquilidade: 77 a 57.
+                Dia (29), o Brasil buscará o bicampeonato consecutivo diante da Colômbia, de
+                quem venceu na fase de grupos em Santiago. Em Lima, quatro anos atrás, a
+                equipe verde e amarela conquistou o ouro.
+                Ao todo, as brasileiras do basquete somam 12 medalhas em Jogos
+                Pan-Americanos: são quatro ouros, quatro pratas e quatro bronzes.
+                Como foi o jogo
+                As brasileiras começaram muito bem a partida e abriram 27 a 17 no primeiro
+                quarto,No segundo, as argentinas tentaram equilibraram o confronto,
+                controlaram o ritmo até a metade da partida e se aproximaram no placar: 42
+                a 35 para o Brasil
+                O terceiro quarto devolveu às brasileiras a calmaria para administrar a
+                vantagem construída no início do jogo, e ampliar a vitória parcial para 61 a 46.
+                No último quarto, as argentinas não conseguiram superar a forte defesa
+                brasileira, sentiram o ritmo imposto pelo Brasil, superior em quadra, e
+                marcaram apenas 11 pontos
             </p>
             <p class="article-art-text">
-            O avanço nas negociações e o acordo foi informado inicialmente pelo jornalista Mauro Cezar Pereira, do “UOL”. As conversas entre Tite e Flamengo foram iniciadas há duas semanas, após o vice da Copa do Brasil e a demissão de Jorge Sampaoli, que ficou no cargo de técnico do time por quase seis meses.
+                Assim como no sábado (28), o domingo (29) rendeu mais medalhas para o judô
+                brasileiro nos Jogos Pan-Americanos de Santiago, no Chile. Destaque para
+                Gabriel Falcão e Guilherme Schmidt, que conquistaram o ouro.
+                A final da categoria até 73 kg seria realizada entre os brasileiros Daniel
+                Cargnin e Gabriel Falcão, mas Cargnin sofreu uma entorse no tornozelo
+                esquerdo durante a semifinal e foi vetado pelos médicos.
             </p>
             <p class="article-art-text">
-            Neste intervalo, o Flamengo disputou dois jogos sob comando interino de Mario Jorge: venceu o Bahia e empatou com o Corinthians. Em meio à data Fifa, Tite assumirá o Flamengo na quinta posição do Campeonato Brasileiro, com 44 pontos. O próximo jogo é contra o Cruzeiro, em 19 de outubro, em Belo Horizonte.
+                Histórico: Brasil está na final do beisebol e garante medalha inédita no Pan
+                Decisão da modalidade será disputada neste sábado.
+                Brasil está na final do beisebol no Pan de Santiago
+                Pela primeira vez na história, a Seleção Brasileira de Beisebol vai ganhar uma
+                medalha em Jogos Pan-Americanos. Mesmo sem entrar em campo nesta
+                quinta-feira (26), o time nacional contou com uma vitória da Colômbia sobre o
+                México para se garantir na final do torneio disputado no Chile. Com isso, ao
+                menos a prata está garantida.
             </p>
-            <h1 class="article-title">A carreira de Tite, novo técnico do Flamengo</h1>
             <p class="article-art-text">
-            Aos 62 anos, Tite terá sua primeira experiência no futebol carioca, mas já está adaptado e mora no Rio de Janeiro com a família há anos.
+                Seleção brasileira, que não disputava uma edição dos Jogos Pan-Americanos
+                desde 2007, sucumbe diante da Colômbia na decisão, mas conquista a
+                primeira medalha do país na modalidade
+                Sensação dos Jogos Pan-Americanos de 2023, a a seleção brasileira de
+                beisebol perdeu a final para a Colômbia, por 9 a 1, neste sábado, em Santiago,
+                no Chile. O Brasil, porém, ficou com a inédita medalha de prata, a primeira da
+                história do país na modalidade. O México, algoz do Panamá, levou o bronze
+            </p>
+            <h1 class="article-art-title">Futebol</h1>
+            <p class="article-art-text">
+                A Copa Libertadores Feminina 2023 chegou ao fim da sua 15ª edição,
+                coroando o Corinthians como o grande campeão, após vencer o clássico com
+                o Palmeiras na final.
+                No dia 05 de outubro, as garotas do time paulista voltaram para casa com
+                mais um título pra estante feminina.
+                Com gol de Millene aos 30 minutos, o time se tornou campeão.
+                Muito emocionada, a jogadora relembrou da trajetória até chegar no Timão.
+                "Sem dúvida nenhuma vai ficar marcado para sempre na minha vida. Só Deus
+                e minha família sabem o quanto eu já sofri para estar desfrutando desses
+                momentos, para estar dentro de campo fazendo o que eu amo. Muita gente
+                critica, muita gente fala muita coisa que dói, mas ninguém sabe o que a gente
+                passa no dia a dia, ninguém sabe o que é a dor de uma atleta. Longe de
+                família, lesão, treinar com dor, mas eu sempre acreditei", acrescentou
+            </p>
+            <figure class="article-art-image">
+                <img src="imagens/noticias/teste1 (2).jpeg" alt="Imagem da matéria">
+                <figcaption class="image-caption">Jogos Pan-Americanos</figcaption>
+                <p class="article-art-meta-info">Por: eu | 25/01/2077</p>
+            </figure>
+            <p class="article-art-text">
+                Cristiano Ronaldo Continua a Brilhar: O Incansável Goleador aos 38 Anos
+                Cristiano Ronaldo, aos 38 anos, mantém-se como um dos maiores goleadores
+                do cenário mundial em 2023, desafiando as expectativas e redefinindo os
+                padrões de longevidade no futebol. Com uma carreira já lendária, o astro
+                português continua a demonstrar sua habilidade única de encontrar as redes
+                adversárias.
+                Ronaldo, atualmente em um estágio avançado de sua carreira, não apenas
+                preserva sua impressionante forma física, mas também adapta seu estilo de
+                jogo. Se inicialmente conhecido pela velocidade e agilidade, agora ele exibe
+                uma maestria técnica e inteligência tática, compensando qualquer eventual
+                perda de explosividade.
+                Jogando em um papel mais central, Ronaldo mostra que sua eficácia não está
+                apenas na juventude, mas na experiência acumulada ao longo dos anos. Seu
+                faro de gol afiado e habilidades de finalização continuam a render dividendos
+                para qualquer equipe que tenha a honra de tê-lo em campo.
+                Ao longo da temporada de 2023, Ronaldo tem superado as expectativas,
+                liderando as tabelas de artilheiros em diversas competições. Seu impacto vai
+                além dos gols marcados, influenciando positivamente os companheiros de
+                equipe e servindo como inspiração para as gerações mais jovens.
+                Enquanto alguns jogadores podem declinar com a idade, Ronaldo desafia
+                essa norma, destacando-se não apenas como um atleta excepcional, mas
+                também como um exemplo de dedicação, profissionalismo e paixão pelo
+                esporte. À medida que avança para o final de sua carreira, Cristiano Ronaldo
+                continua a provar que a genialidade não conhece limites temporais.
 
-            Em três passagens marcantes pelo Corinthians, o técnico conquistou uma Libertadores, um Mundial de Clubes e dois Campeonatos Brasileiros. No Grêmio, foi campeão da Copa do Brasil. No Internacional, venceu a Copa Sul-Americana. Ainda tem passagens por Palmeiras e Atlético-MG, entre outros clubes.
-            </p>
-            <p class="article-art-text">
-            Fora do Brasil, Tite dirigiu o Al-Wahda e o Al-Ain, ambos dos Emirados Árabes Unidos. A maior experiência internacional foi no comando da Seleção Brasileira. Entre junho de 2016 e dezembro de 2022, o técnico defendeu a Amarelinha em 81 jogos, dirigindo o time nas Copas do Mundo da Rússia e do Catar, sendo eliminado nas quartas de final em ambas.
             </p>
         </div>
     </article>
@@ -71,6 +211,7 @@
         </div>
     </footer>
 
-    <script src="script.js"></script> 
+    <script src="script.js"></script>
 </body>
+
 </html>

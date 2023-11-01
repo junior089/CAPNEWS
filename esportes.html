@@ -1,198 +1,269 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
+
+<head lang="pt-BR">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="CAP NEWS - Seu portal de notícias">
-    <meta name="keywords" content="notícias, economia, entretenimento, tecnologia, esportes, gastronomia, saúde, espiritual, política">
-    <meta http-equiv="content-language" content="pt-BR">
-    <meta name="copyright" content="&copy; 2023 Educação Adventista. Todos os direitos reservados.">
-    <title>CAP NEWS</title>
-    <link rel="icon" href="imagens/logos/Escola/logo-adv.ico" type="image/x-icon">
+    <meta name="robots" content="max-image-preview:large">
+    <link rel="icon" type="image/png" sizes="32x32" href="imagens/logos/Escola/logo-adv.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="imagens/logos/Escola/logo-adv.ico">
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+    <title>CAPNEWS</title>
+    <meta name="description"
+        content="Você por dentro de tudo - Notícias ao vivo, fatos da política nacional e internacional no maior canal de notícias do mundo!" />
+    <link rel="canonical" href="https://capnews.com.br/" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Home" />
+    <meta property="og:description" content="CAP NEWS - Seu portal de noticias escolares" />
+    <meta property="og:url" content="https://capnews.com.br/" />
+    <meta property="og:site_name" content="Cap News" />
+    <meta property="article:publisher" content="https://www.instagram.com/portal.capnews" />
+    <meta property="og:image" content="imagens\logos\Escola\capnewsban.jpeg" />
+    <meta property="og:image:width" content="1920" />
+    <meta property="og:image:height" content="1080" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@capnews" />
     <link rel="stylesheet" href="styles.css">
-    <link rel='preload' as='style' onload='this.onload=null;this.rel="stylesheet"' id='BlockNewEditorias-css' href='https://www.cnnbrasil.com.br/wp-content/plugins/master_homepage/includes/components/BlockNewEditorias/public/assets/css/BlockNewEditorias.css?ver=6.80' media='all'/>
-    <link rel='preload' as='style' onload='this.onload=null;this.rel="stylesheet"' id='BlockFree-css' href='https://www.cnnbrasil.com.br/wp-content/plugins/master_homepage/includes/components/BlockFree/public/assets/css/BlockFree.css?ver=6.80' media='all'/>
-    <link rel='preload' as='style' onload='this.onload=null;this.rel="stylesheet"' id='BlockList-css' href='https://www.cnnbrasil.com.br/wp-content/plugins/master_homepage/includes/components/BlockList/public/assets/css/BlockList.css?ver=6.80' media='all'/>
-    <link rel='preload' as='style' onload='this.onload=null;this.rel="stylesheet"' id='mediaelement-css' href='https://www.cnnbrasil.com.br/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css?ver=4.2.17' media='all'/>
-    <link rel='preload' as='style' onload='this.onload=null;this.rel="stylesheet"' id='wp-mediaelement-css' href='https://www.cnnbrasil.com.br/wp-includes/js/mediaelement/wp-mediaelement.min.css?ver=6.3.2' media='all'/>
-    <link rel='preload' as='style' onload='this.onload=null;this.rel="stylesheet"' id='performace-css-concat' href='performace-css-concat.css' media='all'/>
-    <link rel="stylesheet" type="text/css" id="wp-custom-css" href="https://www.cnnbrasil.com.br/?custom-css=af415fd663"/>
-    
-</head>
+    <link rel='preload' as='style' onload='this.onload=null;this.rel="stylesheet"' id='BlockNewEditorias'
+        href='blocknewseditoriais.css' media='all' />
+    <link rel='preload' as='style' onload='this.onload=null;this.rel="stylesheet"' id='BlockList-css'
+        href='blocklist.css' media='all' />
+    <link rel='preload' as='style' onload='this.onload=null;this.rel="stylesheet"' id='wp-mediaelement-css'
+        href='wp-medialemnt.css' media='all' />
+    <link rel='preload' as='style' onload='this.onload=null;this.rel="stylesheet"' id='performace-css-concat'
+        href='performace-css-concat.css' media='all' />
+    <link rel="stylesheet" type="text/css" id="wp-custom-css" href="wp-custom.css" />
+    <link rel="stylesheet" href="header.css">
+
 <body>
-    <header>
-        <div class="logo">
-            <img id="logo-image" src="imagens/logos/Escola/LogoEA-topo.png" alt="CAP NEWS">
+    <header class="main__header main__header--has-central">
+        <h1 class="site__main__title">CAP NEWS</h1>
+        <div class="container">
+            <input type="checkbox" class="header__trigger" id="header__trigger" name="header__trigger">
+            <div class="header__menu">
+                <div class="menu__hamburguer">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <a href="/">
+                    <img alt="CAP NEWS" class="header__menu__logo" src="imagens/logos/Escola/logo adv (2).png">
+                </a>
+                <div class="menu__encapsulators">
+                    <label for="header__trigger"></label>
+                    <ul class="menu__editorials">
+                        <li class="menu-item economia">
+                            <a href="economia.html" title="economia">Economia </a>
+                        </li>
+                        <li class="menu-item entrerterimento">
+                            <a href="entrerterimento.html" title="entrerterimento">Entrerterimento</a>
+                        </li>
+                        <li class="menu-item educacao">
+                            <a href="educação.html" title="educacao">Educação </a>
+                        </li>
+                        <li class="menu-item espiritual">
+                            <a href="espiritual.html" title="espirital">Espiritual </a>
+                        </li>
+                        <li class="menu-item esportes">
+                            <a href="esportes.html" title="esportes">Esportes</a>
+                        </li>
+                        <li class="menu-item gastronomia">
+                            <a href="gastronomia.html" title="gastronomia">Gastronomia</a>
+                        </li>
+                        <li class="menu-item politica">
+                            <a href="politica.html" title="politica">Política </a>
+                        </li>
+                        <li class="menu-item saude">
+                            <a href="saude.html" title="saude">Saúde </a>
+                        </li>
+                        <li class="menu-item tecnologia">
+                            <a href="ciencias.html" title="tecnologia">Tecnologia</a>
+                        </li>
+                        <li class="ancoras menu-item equipe-CAPNEWS">
+                            <a href="" title="Equipe CAP NEWS">Equipe CAP NEWS </a>
+                        <li class="sobre-o-capnews menu-item sobre-o-capnews">
+                            <a href="" title="Sobre o CAP NEWS">Sobre o CAP NEWS </a>
+                        </li>
+                </div>
+            </div>
+            <div class="header__central__itens">
+                <ul class="header__featured__links">
+                    <li><a href="ciencias.html" data-category="tecnologia">Ciências e Tecnologia</a></li>
+                    <li><a href="educação.html">Educação</a></li>
+                    <li><a href="economia.html">Economia</a></li>
+                    <li><a href="entrerterimento.html" data-category="entretenimento">Entretenimento e Cultura</a></li>
+                    <li><a href="esportes.html">Esportes</a></li>
+                    <li><a href="espiritual.html" data-category="espiritual">Espiritual</a></li>
+                    <li><a href="gastronomia.html" data-category="gastronomia">Gastronomia</a></li>
+                    <li><a href="politica.html" data-category="politica">Política</a></li>
+                    <li><a href="saude.html" data-category="saude">Saúde</a></li>
+                </ul>
+            </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="economia.html">Economia</a></li>
-                <li><a href="#" data-category="entretenimento">Entretenimento e Cultura</a></li>
-                <li><a href="#" data-category="tecnologia">Ciências e Tecnologia</a></li>
-                <li><a href="esportes.html">Esportes</a></li>
-                <li><a href="#" data-category="gastronomia">Gastronomia</a></li>
-                <li><a href="#" data-category="saude">Saúde</a></li>
-                <li><a href="#" data-category="espiritual">Espiritual</a></li>
-                <li><a href="#" data-category="politica">Política</a></a></li>
-            </ul>
-        </nav>
     </header>
-    
+
     <main>
 
-        <!-- Placar de Esportes -->
-<section class="sports-score">
-    <div class="score-container">
-        <!-- Bloco de Placar 1 -->
-        <div class="score-block">
-            <div class="team-info">
-                <img src="imagens/logos/times/logo-chelsea.png" alt="logo-chelsea" class="team-logo">
-                <h3 class="team-name">Chelsea</h3>
-            </div>
-            <div class="score">
-                <span class="team-score">3</span>
-                <span class="divider">-</span>
-                <span class="team-score">2</span>
-            </div>
-            <div class="team-info">
-                <img src="imagens/logos/times/logo-psg.png" alt="Logo-psg" class="team-logo">
-                <h3 class="team-name">PSG</h3>
-            </div>
-        </div>
 
-        <!-- Bloco de Placar 2 -->
-        <div class="score-block">
-            <div class="team-info">
-                <img src="imagens/logos/times/logo-man.unt.png" alt="Logo manchester united" class="team-logo">
-                <h3 class="team-name">Man United</h3>
-            </div>
-            <div class="score">
-                <span class="team-score">1</span>
-                <span class="divider">-</span>
-                <span class="team-score">1</span>
-            </div>
-            <div class="team-info">
-                <img src="imagens/logos/times/manchester.png" alt="Logo manchester city" class="team-logo">
-                <h3 class="team-name">Man City</h3>
-            </div>
-        </div>
-
-                <!-- Bloco de Placar 3 -->
-                <div class="score-block">
-                    <div class="team-info">
-                        <img src="imagens/logos/times/real-madrid-logo.png" alt="Logo real-madrid-" class="team-logo">
-                        <h3 class="team-name">Real Madrid</h3>
-                    </div>
-                    <div class="score">
-                        <span class="team-score">0</span>
-                        <span class="divider">-</span>
-                        <span class="team-score">5</span>
-                    </div>
-                    <div class="team-info">
-                        <img src="imagens/logos/times/FCBarcelona.png" alt="Logo Barcelona" class="team-logo">
-                        <h3 class="team-name">Barcelona</h3>
-                    </div>
-                </div>
-
-                        <!-- Bloco de Placar 4 -->
-        <div class="score-block">
-            <div class="team-info">
-                <img src="imagens/logos/times/milan.png" alt="logo-milan" class="team-logo">
-                <h3 class="team-name">Milan</h3>
-            </div>
-            <div class="score">
-                <span class="team-score">4</span>
-                <span class="divider">-</span>
-                <span class="team-score">3</span>
-            </div>
-            <div class="team-info">
-                <img src="imagens/logos/times/borussia.png" alt="Logo-borussia" class="team-logo">
-                <h3 class="team-name">Borussia </h3>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-
-
-
-<!--ultimas notiicias-->
-<section>
-    <div class="homepage__layout homepage__layout--seventy-thirty">
-        <div class="container">
-                <div class="col__l--8 col--12">
-                    <section id="block1810887" class="business block--list block__type--block1810887 container latest__news" data-blockid="1810887">
-                        <h2 class="home__category">Últimas Notícias</h2>
-                        <div class="row">
-                            <div class="posts">
-                                <ul class="home__new">
-                                    <li class="home__list__item">
-                                        <div class="home__list__tag">
-                                            <picture>
-                                                <source media="(max-width: 799px)" srcset="https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/Reuters_Direct_Media/BrazilOnlineReportBusinessNews/tagreuters.com2023binary_LYNXMPEJ9A0LD-FILEDIMAGE.jpg?w=400&amp;h=195&amp;crop=1">
-                                                <source media="(min-width: 800px)" srcset="https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/Reuters_Direct_Media/BrazilOnlineReportBusinessNews/tagreuters.com2023binary_LYNXMPEJ9A0LD-FILEDIMAGE.jpg?w=350&amp;h=195&amp;crop=1">
-                                                <img loading="lazy" src="https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/Reuters_Direct_Media/BrazilOnlineReportBusinessNews/tagreuters.com2023binary_LYNXMPEJ9A0LD-FILEDIMAGE.jpg?w=292" title="Dólar paralelo bateu recorde esta semana ao atingir a marca de 1.010 pesos (R$ 14,58)" alt="Dólar paralelo bateu recorde esta semana ao atingir a marca de 1.010 pesos (R$ 14,58)"/>
-                                            </picture>
-                                            <div class="home__list__news">
-                                                <div class="home__list__tag">
-                                                    <h3 class="news-item-header__title market__new__title">O que esperar do dólar paralelo na Argentina na reta final da campanha eleitoral</h3>
+        <!--ultimas notiicias-->
+        <section>
+            <div class="homepage__layout homepage__layout--seventy-thirty">
+                <div class="container">
+                    <div class="row">
+                        <div class="col__l--8 col--12">
+                            <section id="block1810887"
+                                class="business block--list block__type--block1810887 container latest__news"
+                                data-blockid="1810887">
+                                <h2 class="home__category">Últimas Notícias </h2>
+                                <div class="row">
+                                    <div class="posts">
+                                        <ul class="home__new">
+                                            <li class="home__list__item">
+                                                <a class="home__list__tag" href="tite.html" title="teste">
+                                                    <picture>
+                                                        <img loading="lazy" src="imagens/noticias/neymar.jpg"
+                                                            title="teste" alt="teste" />
+                                                    </picture>
+                                                    <div class="home__list__news">
+                                                        <div class="home__list__tag">
+                                                            <h3 class="news-item-header__title market__new__title">teste
+                                                            </h3>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <div class="latest__news__infos">
+                                                    <span class="home__title__date">teste </span>
+                                                    <a class="latest__news__tag" href="">
+                                                        <span class="latest__news__category">teste</span>
+                                                    </a>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div class="latest__news__infos">
-                                            <span class="home__title__date">15/10/2077 às 04:00</span>
-                                            <span class="latest__news__category">eu</span>
-                                        </div>
-                                    </li>
-                                    <li class="home__list__item">
-                                        <div class="home__list__tag">
-                                            <picture>
-                                                <source media="(max-width: 799px)" srcset="https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/2023/03/img20221129211230956-e1679058168723.jpg?w=400&amp;h=195&amp;crop=1">
-                                                <source media="(min-width: 800px)" srcset="https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/2023/03/img20221129211230956-e1679058168723.jpg?w=350&amp;h=195&amp;crop=1">
-                                                <img loading="lazy" src="https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/2023/03/img20221129211230956-e1679058168723.jpg?w=347" title="Em entrevista à CNN, o deputado Pedro Paulo ainda indica as mudanças que pode fazer em seu parecer de PL para taxação de fundos exclusivos e offshore, que deve ser votado na terça-feira (17) na Câmara" alt="Em entrevista à CNN, o deputado Pedro Paulo ainda indica as mudanças que pode fazer em seu parecer de PL para taxação de fundos exclusivos e offshore, que deve ser votado na terça-feira (17) na Câmara"/>
-                                            </picture>
-                                            <div class="home__list__news">
-                                                <div class "home__list__tag">
-                                                    <h3 class="news-item-header__title market__new__title">Projeto deve prever reformulação dos Juros sobre Capital Próprio, não mais extinção, diz relator à CNN</h3>
+                                            </li>
+                                            <li class="home__list__item">
+                                                <a class="home__list__tag" href="tite.html" title="teste">
+                                                    <picture>
+                                                        <img loading="lazy" src="imagens/noticias/neymar.jpg"
+                                                            title="teste" alt="teste" />
+                                                    </picture>
+                                                    <div class="home__list__news">
+                                                        <div class="home__list__tag">
+                                                            <h3 class="news-item-header__title market__new__title">teste
+                                                            </h3>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <div class="latest__news__infos">
+                                                    <span class="home__title__date">teste </span>
+                                                    <a class="latest__news__tag" href="">
+                                                        <span class="latest__news__category">teste</span>
+                                                    </a>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div class="latest__news__infos">
-                                            <span class="home__title__date">15/10/2077 às 04:00</span>
-                                            <span class="latest__news__category">eu</span>
-                                        </div>
-                                    </li>
-                                    <li class="home__list__item">
-                                        <div class="home__list__tag">
-                                            <picture>
-                                                <source media="(max-width: 799px)" srcset="https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/2022/02/energia-eolica-renovavel.jpg?w=400&amp;h=195&amp;crop=1">
-                                                <source media="(min-width: 800px)" srcset="https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/2022/02/energia-eolica-renovavel.jpg?w=350&amp;h=195&amp;crop=1">
-                                                <img loading="lazy" src="https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/2022/02/energia-eolica-renovavel.jpg?w=292" title="Esse montante representa 11% do valor total investido para energia sustentável em economias emergentes" alt="Esse montante representa 11% do valor total investido para energia sustentável em economias emergentes"/>
-                                            </picture>
-                                            <div class="home__list__news">
-                                                <div class="home__list__tag">
-                                                    <h3 class="news-item-header__title market__new__title">Brasil lidera investimentos internacionais em energia renovável, diz relatório da ONU</h3>
+                                            </li>
+                                            <li class="home__list__item">
+                                                <a class="home__list__tag" href="tite.html" title="teste">
+                                                    <picture>
+                                                        <img loading="lazy" src="imagens/noticias/neymar.jpg"
+                                                            title="teste" alt="teste" />
+                                                    </picture>
+                                                    <div class="home__list__news">
+                                                        <div class="home__list__tag">
+                                                            <h3 class="news-item-header__title market__new__title">teste
+                                                            </h3>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <div class="latest__news__infos">
+                                                    <span class="home__title__date">teste </span>
+                                                    <a class="latest__news__tag" href="">
+                                                        <span class="latest__news__category">teste</span>
+                                                    </a>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div class="latest__news__infos">
-                                            <span class="home__title__date">15/10/2077 às 04:00</span>
-                                            <span class="latest__news__category">EU</span>
-                                        </div>
-                                    </li>
-                                    
-                                </ul>
-                            </div>
+                                            </li>
+                                            <li class="home__list__item">
+                                                <a class="home__list__tag" href="tite.html" title="teste">
+                                                    <picture>
+                                                        <img loading="lazy" src="imagens/noticias/neymar.jpg"
+                                                            title="teste" alt="teste" />
+                                                    </picture>
+                                                    <div class="home__list__news">
+                                                        <div class="home__list__tag">
+                                                            <h3 class="news-item-header__title market__new__title">teste
+                                                            </h3>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <div class="latest__news__infos">
+                                                    <span class="home__title__date">teste </span>
+                                                    <a class="latest__news__tag" href="">
+                                                        <span class="latest__news__category">teste</span>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            <li class="home__list__item">
+                                                <a class="home__list__tag" href="tite.html" title="teste">
+                                                    <picture>
+                                                        <img loading="lazy" src="imagens/noticias/neymar.jpg"
+                                                            title="teste" alt="teste" />
+                                                    </picture>
+                                                    <div class="home__list__news">
+                                                        <div class="home__list__tag">
+                                                            <h3 class="news-item-header__title market__new__title">teste
+                                                            </h3>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <div class="latest__news__infos">
+                                                    <span class="home__title__date">teste </span>
+                                                    <a class="latest__news__tag" href="">
+                                                        <span class="latest__news__category">teste</span>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            <li class="home__list__item">
+                                                <a class="home__list__tag" href="tite.html" title="teste">
+                                                    <picture>
+                                                        <img loading="lazy" src="imagens/noticias/neymar.jpg"
+                                                            title="teste" alt="teste" />
+                                                    </picture>
+                                                    <div class="home__list__news">
+                                                        <div class="home__list__tag">
+                                                            <h3 class="news-item-header__title market__new__title">teste
+                                                            </h3>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <div class="latest__news__infos">
+                                                    <span class="home__title__date">teste </span>
+                                                    <a class="latest__news__tag" href="">
+                                                        <span class="latest__news__category">teste</span>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            <li class="home__list__item">
+                                                <a class="home__list__tag" href="tite.html" title="teste">
+                                                    <picture>
+                                                        <img loading="lazy" src="imagens/noticias/neymar.jpg"
+                                                            title="teste" alt="teste" />
+                                                    </picture>
+                                                    <div class="home__list__news">
+                                                        <div class="home__list__tag">
+                                                            <h3 class="news-item-header__title market__new__title">teste
+                                                            </h3>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <div class="latest__news__infos">
+                                                    <span class="home__title__date">teste </span>
+                                                    <a class="latest__news__tag" href="">
+                                                        <span class="latest__news__category">teste</span>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                    </div>
+                                </div>
                         </div>
-                    </section>
-                </div>
-    </div>
-    
-</main>
-<footer>
-    <p>&copy; 2023 Educação Adventista. Todos os direitos reservados.</p>
-</footer>
+    </main>
+
 </body>
-<script src="script.js"></script>
+
 </html>
