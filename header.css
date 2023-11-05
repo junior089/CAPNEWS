@@ -1048,11 +1048,11 @@ template {
 }
 
 *,*::before,*::after {
-    /* box-sizing: border-box; */
+    box-sizing: border-box; 
 }
 
 .container,.container--sm,.container--lg,.wp-block-columns {
-    /* position: relative; */
+    position: relative;
     margin: 0 auto;
     padding: 0 16px;
     width: 100%!important;
@@ -2386,9 +2386,8 @@ body.hidemenu {
 
 .header__menu__logo {
     max-width: 150px;
-    margin-left: 10px;
-    height: 150px;
-    margin-top: -40px;
+    height: 50px;
+    margin-top: 8px;
 }
 
 .header__trigger:checked~.header__menu .menu__hamburguer span {
@@ -2665,12 +2664,13 @@ body.hidemenu {
 
 @media(max-width: 991px) {
     .header__actions .header__menu__logo {
-        height:7px;
+        height: 7px;
     }
 
     .header__menu__logo {
         width: 150px;
-        height: 150px;
+        height: 50px;
+        margin-top: 5px;
     }
 
     .main__header,.header__menu {
@@ -2705,8 +2705,7 @@ body.hidemenu {
     }
 
     .header__trigger {
-        top: 50%;
-        margin-top: -6px
+
     }
 
     .header__menu>a {
@@ -3616,3 +3615,85 @@ footer {
             color: #333;
         }
     }
+
+
+
+    /*Ajustes na Tabela da Copa 2023*/
+.soccer-widget__rounds {
+    padding-right: 16px;
+}
+
+.soccer-widget__rounds__title {
+    margin: 24px 0 24px;
+}
+
+.soccer-widget__block__rounds {
+    padding: 0 0 42px 0;
+}
+
+div > div > div > div.carousel__screen > ul > li:nth-child(n) > div > h3 {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+h3.soccer-widget__championship__name {
+    justify-content: end; 
+    margin-right: 4px;
+}
+div > div > div > div.carousel__screen > ul > li > div > span > img {
+    display: none;
+}
+
+p.soccer-widget__main-title__secondary {
+    display: none;
+}
+
+.soccer-widget__qualifiers .soccer-widget__round__list .soccer-widget__round {
+    height: 220px;
+}
+
+.soccer-widget__rounds.soccer-widget__rounds--listing {
+    padding: 8px;
+}
+
+th.soccer-widget__rating__label {
+    padding-left: 40px;
+}
+
+.soccer-widget__rating__body tr:nth-child(n):not([data-jogos="0"]) .soccer-widget__rating__label::after {
+	top:12px;
+	left: 24px;
+}
+
+@media (max-width: 700px) {
+	.soccer-widget__rating__body tr:nth-child(n):not([data-jogos="0"]) .soccer-widget__rating__label::after {
+	left: 0;
+}
+}
+
+body.tag-359 .soccer-widget__main-title {
+    display: none;
+}
+
+@media (max-width: 700px) {
+#block2398614 > div > section > div > ul.soccer-widget__tabs__nav.soccer-widget__tabs__nav--groups {
+    z-index: 2;
+}
+
+#block2398614 > div > section > div > ul.soccer-widget__tabs__nav.soccer-widget__tabs__nav--qualifiers {
+    z-index: 2;
+}
+	
+.soccer-widget__qualifiers .soccer-widget__round__list .soccer-widget__round {
+    height: 240px;
+}	
+}
+
+span.soccer-widget__rating__team, span.soccer-widget__rating__position {
+    vertical-align: super;
+}
+
+body.page-id-2426474 .soccer-widget__main-title {
+    display: none;
+}
+        

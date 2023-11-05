@@ -1,0 +1,44 @@
+<IfModule mod_rewrite.c>
+Options +FollowSymLinks -MultiViews
+RewriteEngine On
+RewriteBase /
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.html [NC]
+RewriteRule ^ %1 [R,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*?)/?$ $1.html [L]
+</IfModule>
+
+<IfModule mod_rewrite.c>
+	RewriteEngine Em
+	RewriteBase /
+	RewriteRule ^index\.html$ - [L]
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteRule . /índice.html [L]
+</IfModule>
+
+#BEGIN remover www da url
+RewriteEngine Em
+RewriteCond %{HTTP_HOST} !^capnews.com.br$ [NC]
+RewriteRule ^(.*)$ http://capnews.com.br/$1 [L,R=301]
+
+Options -ExecCGI
+AddHandler cgi-script .php .pl .py .jsp .asp .htm .shtml .sh .cgi
+
+AddType application/octet-stream .avi .mpg .mov .pdf .xls .mp4
+
+<FilesMatch "^php5?\.(ini|cgi)$">
+Order Deny,Allow
+Deny from All
+Allow from env=REDIRECT_STATUS
+</FilesMatch>
+
+RewriteRule ^(.*)(de|es|fr|it|ja|ru|en)/$ - [co=lang:$2:.capnews.com.br:7200:/]
+
+Options -Indexes
+DirectoryIndex index.html index.php /index.php
+
+
+
+
